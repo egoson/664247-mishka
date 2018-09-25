@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Денис Филипкин](https://up.htmlacademy.ru/adaptive/15/user/664247).
-* Наставник: `Неизвестно`.
+* Наставник: [Юлия Антонова](https://htmlacademy.ru/profile/id39082).
 
 ---
 

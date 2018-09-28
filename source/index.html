@@ -4,9 +4,58 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
   </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
-
+  <body class="body">
+    <header class="header">
+    <a href="#" class="header__logo logo">
+        <img src="" alt="" class="logo__img">
+    </a>
+    <button class="burger" type="button"></button> <!-- здесь сменил btn на burger , потому-что от обычной кнопки, кторая встречается на сайте бургер отличается очень сильно и он в единственном роде -->
+</header>
+    <main class="main">
+      <div class="intro">
+        <div class="intro__wrapper">
+          <h1 class="intro__title">заголовок</h1>
+        </div>
+      </div>
+      <ul class="catalog-list">
+        <li class="catalog-list__item">
+          <a href="#" class="catalog-list__link">
+            <span class="text">Предметы</span>
+            <span class="icon">лампа</span>
+          </a>
+        </li>
+        <li class="catalog-list__item catalog-list__item--dark">
+          <a href="#" class="catalog-list__link">
+            <span class="text">Игрушки</span>
+            <span class="icon">лего</span>
+          </a>
+        </li>
+      </ul>
+      <section class="item-actions">
+        <p class="item-actions__action">Вязаные корзинки</p>
+        <h2 class="item-actions__title">Товар недели</h2>
+        <p class="item-actions__label">Экологическая чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <table class="item-actions-table">
+          <tr class="item-actions-table__row"> <!-- ширину 260, флекс, бордер боттом -->
+            <td class="item-actions-table__data">Цвет</td> <!-- здесь задаю ширину 97пх по макету расстояние от первой колонки до второй, текст элигн старт...
+            я посчитал пиксели, первый столбик ровно 1/3 от ширины макета, то есть можно сделать через флекс шринк 1/3 - первый столбик, второй 2/3. не помню как он точно задается, это гляну потом.-->
+            <td class="item-actions-table__data"><<Тифани/серый>></td> <!-- флекс шринк 2/3, текст элигн старт -->
+          </tr>
+          <tr class="item-actions-table__row">
+            <td class="item-actions-table__data">Диаметр</td>
+            <td class="item-actions-table__data">25 см</td>
+          </tr>
+          <tr class="item-actions-table__row">
+            <td class="item-actions-table__data">Высота</td>
+            <td class="item-actions-table__data">15 см</td>
+          </tr>
+        </table>
+        <div class="item-actions-image-wrapper image-wrapper"> <!-- этот блок будем вставлять еще не раз, поэтому это блок, а не элемент  -->
+          <img class="item-actions-image-wrapper__img" src="">  <!-- здесь конечно сомнения по поводу имени-->
+          <p class="item-actions__price price"></p> <!-- цена же отдельный блок , и она наверняка везде одинаково выглядит -->
+        </div>
+        <button class="item-actions__btn btn" type="button"></button>
+      </section>
+    </main>
   </body>
 </html>

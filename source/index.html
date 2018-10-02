@@ -4,58 +4,155 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
   </head>
-  <body class="body">
+  <body>
     <header class="header">
-    <a href="#" class="header__logo logo">
+      <a href="#" class="header__logo logo">
         <img src="" alt="" class="logo__img">
-    </a>
-    <button class="burger" type="button"></button> <!-- здесь сменил btn на burger , потому-что от обычной кнопки, кторая встречается на сайте бургер отличается очень сильно и он в единственном роде -->
-</header>
+      </a>
+      <ul class="header__menu menu">
+        <li class="menu__item">Каталог товаров</li>
+        <li class="menu__item">Вязание на заказ</li>
+        <li class="menu__item">
+          <img class="menu__item-img" src="#">
+          <span class="menu__item-text">Поиск по сайту</span>
+        </li>
+        <li class="menu__item">
+          <img class="menu__item-img" src="#">
+          <span class="menu__item-text">Корзина: пока пуста</span>
+        </li>
+      </ul>
+      <button class="burger" type="button"></button> <!-- здесь сменил btn на burger , потому-что от обычной кнопки, кторая встречается на сайте бургер отличается очень сильно и он в единственном роде -->
+    </header>
     <main class="main">
       <div class="intro">
         <div class="intro__wrapper">
-          <h1 class="intro__title">заголовок</h1>
+          <h1 class="intro__title">Милые штуки ручной
+          работы для дома</h1>
         </div>
       </div>
       <ul class="catalog-list">
         <li class="catalog-list__item">
           <a href="#" class="catalog-list__link">
-            <span class="text">Предметы</span>
+            <span class="text">Предметы интерьера</span>
             <span class="icon">лампа</span>
           </a>
         </li>
         <li class="catalog-list__item catalog-list__item--dark">
           <a href="#" class="catalog-list__link">
-            <span class="text">Игрушки</span>
+            <span class="text">Детские игрушки</span>
             <span class="icon">лего</span>
           </a>
         </li>
       </ul>
-      <section class="item-actions">
-        <p class="item-actions__action">Вязаные корзинки</p>
-        <h2 class="item-actions__title">Товар недели</h2>
-        <p class="item-actions__label">Экологическая чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-        <table class="item-actions-table">
-          <tr class="item-actions-table__row"> <!-- ширину 260, флекс, бордер боттом -->
-            <td class="item-actions-table__data">Цвет</td> <!-- здесь задаю ширину 97пх по макету расстояние от первой колонки до второй, текст элигн старт...
+      <section class="bestseller">
+        <p class="bestseller__action">Вязаные корзинки</p>
+        <h2 class="bestseller__title">Товар недели</h2>
+        <p class="bestseller__label">Экологическая чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <table class="bestseller-table">
+          <tr class="bestseller-table__row"> <!-- ширину 260, флекс, бордер боттом -->
+            <th class="bestseller-table__data">Цвет</th> <!-- здесь задаю ширину 97пх по макету расстояние от первой колонки до второй, текст элигн старт...
             я посчитал пиксели, первый столбик ровно 1/3 от ширины макета, то есть можно сделать через флекс шринк 1/3 - первый столбик, второй 2/3. не помню как он точно задается, это гляну потом.-->
-            <td class="item-actions-table__data"><<Тифани/серый>></td> <!-- флекс шринк 2/3, текст элигн старт -->
+            <td class="bestseller-table__data">&laquo;Тифани/серый&raquo;</td> <!-- флекс шринк 2/3, текст элигн старт -->
           </tr>
-          <tr class="item-actions-table__row">
-            <td class="item-actions-table__data">Диаметр</td>
-            <td class="item-actions-table__data">25 см</td>
+          <tr class="bestseller-table__row">
+            <th class="bestseller-table__data">Диаметр</th>
+            <td class="bestseller-table__data">25 см</td>
           </tr>
-          <tr class="item-actions-table__row">
-            <td class="item-actions-table__data">Высота</td>
-            <td class="item-actions-table__data">15 см</td>
+          <tr class="bestseller-table__row">
+            <th class="bestseller-table__data">Высота</th>
+            <td class="bestseller-table__data">15 см</td>
           </tr>
         </table>
-        <div class="item-actions-image-wrapper image-wrapper"> <!-- этот блок будем вставлять еще не раз, поэтому это блок, а не элемент  -->
-          <img class="item-actions-image-wrapper__img" src="">  <!-- здесь конечно сомнения по поводу имени-->
-          <p class="item-actions__price price"></p> <!-- цена же отдельный блок , и она наверняка везде одинаково выглядит -->
+        <div class="bestseller__img-wrapper"> <!-- этот блок будем вставлять еще не раз, поэтому это блок, а не элемент  -->
+          <img class="bestseller__img" src="">  <!-- здесь конечно сомнения по поводу имени-->
+          <p class="bestseller__price"></p> <!-- цена же отдельный блок , и она наверняка везде одинаково выглядит -->
         </div>
-        <button class="item-actions__btn btn" type="button"></button>
+        <a class="bestseller__btn btn" type="button"></a>
+      </section>
+      <section class="about-us">
+        <div class="about-us__wrapper">
+          <h2 class="about-us__title">Коротко о нас:</h2>
+        </div>
+        <ul class="about-us__advantages advantages-list">
+          <li class="advantages-list__item advantage">
+            <img class="advantage__icon" src="#" alt="цветочек">
+            <span class="advantage__text">Экологически чистые материалы</span>
+          </li>
+          <li class="advantages-list__item advantage">
+            <img class="advantage__icon" src="#" alt="денежная купюра">
+            <span class="advantage__text">Скандинавский стиль по российской цене</span>
+          </li>
+          <li class="advantages-list__item advantage">
+            <img class="advantage__icon" src="#" alt="лайк">
+            <span class="advantage__text">Увеличивает лайки на фотографиях</span>
+          </li>
+          <li class="advantages-list__item advantage">
+            <img class="advantage__icon" src="#" alt="клубок">
+            <span class="advantage__text">Связано вручную с любовью и умилением</span>
+          </li>
+          <li class="advantages-list__item advantage">
+            <img class="advantage__icon" src="#" alt="ракета">
+            <span class="advantage__text">Поддержка отечественного производителя</span>
+          </li>
+          <li class="advantages-list__item advantage">
+            <img class="advantage__icon" src="#" alt="поадрочная упаковка">
+            <span class="advantage__text">Поставляется в подарочной упаковке</span>
+          </li>
+        </ul>
+      </section>
+      <section class="reviews">
+        <div class="reviews__wrapper slider">
+          <h2 class="reviews__title">Отзывы</h2>
+          <div class="reviews__list  slider__list">
+            <blockquote class="reviews__item  slider__item">
+              <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+              <cite class="reviews__author-name">Анастасия Красильникова</cite>
+              <p class="reviews__author-link">@misssssiskras</p>
+            </blockquote>
+            <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+            <button class="reviews__next" type="button">Следующий отзыв</button>
+            <a class="reviews__write btn" href="#">Написать</a>
+          </div>
+        </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__contacts contacts">
+        <b class="contacts__title">Контакты</b>
+        <table class="contacts-table">
+          <tr class="contacts-table__row">
+            <th class="contacts-table__text">e-mail</th>
+            <td class="contacts-table__text contacts-table__text--underline">info@mimimishkashop.ru</td>
+          </tr>
+          <tr class="contacts-table__row">
+            <th class="contacts-table__text">адрес:</th>
+            <td class="contacts-table__text">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+          </tr>
+        </table>
+      </div>
+      <section class="footer__map">
+      </section>
+      <div class="footer__social-block social-link">
+        <a class="social-link social-link--instagramm" href="#">instagramm</a>
+        <a class="social-link social-link--facebook" href="#">facebook</a>
+        <a class="social-link social-link--twitter" href="#">twitter</a>
+      </div>
+      <div class="footer__copyright copyright">
+        <b class="copyright__text">Разработано:</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+    </footer>
   </body>
 </html>
+<section class="modal">
+  <div class="modal__wrapper">
+    <h2 class="modal__title">Добавить в корзину</h2>
+    <p class="modal__text">Выберете размер:</p>
+  </div>
+  <ul class="modal__size-list">
+    <li class="modal__size-list-item">s</li>
+    <li class="modal__size-list-item">m</li>
+    <li class="modal__size-list-item">l</li>
+  </ul>
+  <a class="modal__btn btn" href="#">Добавить</a>
+</section>

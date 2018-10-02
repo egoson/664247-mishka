@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
   </head>
-  <body class="body">
+  <body>
     <header class="header">
       <a href="#" class="header__logo logo">
         <img src="" alt="" class="logo__img">
@@ -12,58 +12,85 @@
       <button class="burger" type="button"></button> <!-- здесь сменил btn на burger , потому-что от обычной кнопки, кторая встречается на сайте бургер отличается очень сильно и он в единственном роде -->
     </header>
     <main class="catalog">
-      <div class="catalog-wrapper">
+      <div class="catalog__wrapper">
         <h1 class="catalog__title">Каталог товаров</h1>
       </div>
-      <div class="catalog-items">
-        <div class="catalog-items__item catalog-item">
-          <p class="catalog-item__img"><img class="catalog-item__rabbit" src="#"></p>
-          <h2 class="catalog-item__title">Зайчик попрыгайчик</h2>
+      <div class="catalog-list">
+        <div class="catalog-list__item catalog-item">
+          <a class="catalog-item__img" href="#">
+            <img src="#" alt="заяц">
+          </a>
+          <h2 class="catalog-item__title">
+            <a href="#">Зайчик попрыгайчик</a>
+          </h2>
           <p class="catalog-item__text">Рост 30см, вес 200 г</p>
-          <div class="catalog-item__price-icon">
+          <div class="catalog-item__price-row">
             <p class="catalog-item__price">1200 руб.</p>
-            <img class="catalog-item__img" src="#">
+            <a class="catalog-item__btn" href="#">
+              <img src="#" alt="корзинка">
+            </a>
           </div>
         </div>
-        <div class="catalog-items__item catalog-item">
-          <p class="catalog-item__img"><img class="catalog-item__basket" src="#"></p>
-          <h2 class="catalog-item__title">Корзинка для белья</h2>
+        <div class="catalog-list__item catalog-item">
+          <a class="catalog-item__img" href="#">
+            <img src="#" alt="корзинка для белья">
+          </a>
+          <h2 class="catalog-item__title">
+            <a href="#">Корзинка для белья</a>
+          </h2>
           <p class="catalog-item__text">Диаметр 15 см, высота 10 см</p>
-          <div class="catalog-item__price-icon">
+          <div class="catalog-item__price-row">
             <p class="catalog-item__price">690 руб.</p>
-            <img class="catalog-item__img" src="#">
+            <a class="catalog-item__btn" href="#">
+              <img src="#" alt="корзинка">
+            </a>
           </div>
         </div>
-        <div class="catalog-items__item catalog-item">
-          <p class="catalog-item__img"><img class="catalog-item__big-basket" src="#"></p>
-          <h2 class="catalog-item__title">Большая корзинка для игрушек</h2>
+        <div class="catalog-list__item catalog-item">
+          <a class="catalog-item__img" href="#">
+            <img src="#" alt="большая корзинка для игрушек">
+          </a>
+          <h2 class="catalog-item__title">
+            <a href="#">Большая корзинка для игрушек</a>
+          </h2>
           <p class="catalog-item__text">Диаметр 30 см, высота 30 см</p>
-          <div class="catalog-item__price-icon">
+          <div class="catalog-item__price-row">
             <p class="catalog-item__price">1500 руб.</p>
-            <img class="catalog-item__img" src="#">
+            <a class="catalog-item__btn" href="#">
+              <img src="#" alt="корзинка">
+            </a>
           </div>
         </div>
       </div>
-      <section class="manufacture">
-        <div class="manufacture-wrapper">
-          <p class="manufacture__img"><img class="manufacture__img-camera" src="#"></p>
-          <h2 class="manufacture__title">Процесс производства</h2>
-          <div class="manufacture-video">
-            <p class="manufacture-video__img"><img class="manufacture-video__img-manufactvideo" src="#">
-            <p class="manufacture-video__img"><img class="manufacture-video__img-play" src="#">
+      <section class="video-block">
+        <div class="video-block__wrapper">
+          <h2 class="video-block__title">
+            <span class="video-block__title-icon">
+              <img src="#" alt="видеокамера">
+            </span>
+            <span class="video-block__title-text">
+              Процесс производства
+            </span>
+          </h2>
+          <div class="video">
+            <img class="video__poster" alt="видео: процесс производства">
+            <button type="button" class="video__btn"></button>
           </div>
-          <p class="manufacture__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <button class="manufacture__btn btn" type="button">Сделать заказ</button>
+          <p class="video-block__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="video-block__btn btn" href="#">Сделать заказ</a>
         </div>
       </section>
-      <footer class="catalog-footer">
-        <div class="catalog-footer__social-link social-link">
-          <a class="social-link__instagramm" href="#">instagramm</a>
-          <a class="social-link__facebook" href="#">facebook</a>
-          <a class="social-link__twitter" href="#">twitter</a>
-        <div class="catalog-footer__copyright copyright">
-          <b class="copyright__text">Разработано:</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        </div>
-      </footer>
     </main>
+    <footer class="footer">
+      <div class="footer__social-block social-link">
+        <a class="social-link social-link--instagramm" href="#">instagramm</a>
+        <a class="social-link social-link--facebook" href="#">facebook</a>
+        <a class="social-link social-link--twitter" href="#">twitter</a>
+      </div>
+      <div class="footer__copyright copyright">
+        <b class="copyright__text">Разработано:</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+    </footer>
+  </body>
+</html>

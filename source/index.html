@@ -159,10 +159,13 @@
     <h2 class="modal__title">Добавить в корзину</h2>
     <p class="modal__text">Выберете размер:</p>
   </div>
-  <ul class="modal__size-list">
-    <li class="modal__size-list-item modal__size-list-item--focus">s</li>
-    <li class="modal__size-list-item">m</li>
-    <li class="modal__size-list-item">l</li>
-  </ul>
-  <a class="modal__btn btn" href="#">Добавить</a>
+    <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
+      <input class="modal-form__radio" type="radio" name="size" id="size-s" value="s" checked>
+      <label class="modal-form__radio-label" for="size-s">s</label>
+      <input class="modal-form__radio" type="radio" name="size" id="size-m" value="m">
+      <label class="modal-form__radio-label" for="size-m">m</label>
+      <input class="modal-form__radio" type="radio" name="size" id="size-l" value="l">
+      <label class="modal-form__radio-label" for="size-l">l</label>
+      <button class="modal__btn btn">Добавить</button>
+    </form>
 </section>

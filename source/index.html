@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header class="header">
@@ -18,12 +19,12 @@
         </li>
         <li class="menu__item">
           <form class="menu__search" action="https://echo.htmlacademy.ru" method="get">
-            <img class="menu__item-img" src="#">
+            <img class="menu__item-img" src="img/icon-search.svg">
             <input class="menu__search-block" type="search" placeholder="Поиск по сайту"></span>
           </form>
         </li>
         <li class="menu__item">
-          <img class="menu__item-img" src="#">
+          <img class="menu__item-img" src="img/icon-cart.svg">
           <a href="#" class="menu__item-link">Корзина: пока пуста</a>
         </li>
       </ul>
@@ -39,14 +40,14 @@
       <ul class="catalog-list">
         <li class="catalog-list__item">
           <a href="#" class="catalog-list__link">
-            <span class="text">Предметы интерьера</span>
-            <span class="icon">лампа</span>
+            <span class="catalog-list__text">Предметы интерьера</span>
+            <span class="catalog-list__icon">лампа</span>
           </a>
         </li>
         <li class="catalog-list__item catalog-list__item--dark">
           <a href="#" class="catalog-list__link">
-            <span class="text">Детские игрушки</span>
-            <span class="icon">лего</span>
+            <span class="catalog-list__text">Детские игрушки</span>
+            <span class="catalog-list__icon">лего</span>
           </a>
         </li>
       </ul>
@@ -140,6 +141,7 @@
       </div>
       <section class="footer__map">
       </section>
+      <button class="footer__btn btn" type="button">Напишите нам</button>
       <div class="footer__social-block">
         <a class="social-link social-link--instagramm" href="#">instagramm</a>
         <a class="social-link social-link--facebook" href="#">facebook</a>
@@ -157,10 +159,13 @@
     <h2 class="modal__title">Добавить в корзину</h2>
     <p class="modal__text">Выберете размер:</p>
   </div>
-  <ul class="modal__size-list">
-    <li class="modal__size-list-item">s</li>
-    <li class="modal__size-list-item">m</li>
-    <li class="modal__size-list-item">l</li>
-  </ul>
-  <a class="modal__btn btn" href="#">Добавить</a>
+    <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
+      <input class="modal-form__radio" type="radio" name="size" id="size-s" value="s" checked>
+      <label class="modal-form__radio-label" for="size-s">s</label>
+      <input class="modal-form__radio" type="radio" name="size" id="size-m" value="m">
+      <label class="modal-form__radio-label" for="size-m">m</label>
+      <input class="modal-form__radio" type="radio" name="size" id="size-l" value="l">
+      <label class="modal-form__radio-label" for="size-l">l</label>
+      <button class="modal__btn btn">Добавить</button>
+    </form>
 </section>

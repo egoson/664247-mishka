@@ -1,11 +1,17 @@
 .bestseller {
-  margin-bottom: 36px;
+  width: 260px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 126px;
+
 }
 
-.bestseller__action {
-  font-size: 24px;
+.bestseller__good {
+  font-size: 22px;
   font-weight: 700;
   line-height: 30px;
+  margin: 0;
+
 }
 
 .bestseller__title {
@@ -13,6 +19,7 @@
   font-weight: 700;
   line-height: 20px;
   color: #63d1bb;
+  margin: 0;
 }
 
 .bestseller__label {
@@ -29,9 +36,68 @@
   color: #444444;
 }
 
+.bestseller__btn {
+  display: block;
+  text-align: center;
+  margin-top: 29px;
+}
+
 .bestseller__price {
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
   color: #444444;
+  margin: 0;
+  margin-top: 29px;
+  text-align: center;
+}
+
+
+.bestseller__wrap-btn {
+  position: absolute;
+  left: 25%;
+  bottom: -100px;
+}
+
+@media (min-width: 768px) {
+  .bestseller {
+    width: 668px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .bestseller__good {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .bestseller__title {
+    line-height: 17px;
+    text-align: center;
+    width: 70px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: 28px;
+  }
+
+  .bestseller__wrap-bestseller {
+    display: flex;
+  }
+
+  .bestseller__wrap-description {
+    width: 291px;
+    margin-right: 43px;
+  }
+
+  .bestseller__wrap-btn {
+    position: relative;
+    left: 0;
+    bottom: 0;
+
+  }
+
+  .bestseller__img {
+    width: 334px;
+    height: 404px;
+  }
 }

@@ -1,3 +1,28 @@
+.video-block {
+  position: relative;
+  width: 260px;
+  margin: auto;
+  margin-bottom: 98px;
+}
+
+.video-block::before {
+  content: "";
+  display: block;
+  width: 260px;
+  height: 1px;
+  background-color: #ececec
+}
+
+.video-block::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 260px;
+  height: 1px;
+  bottom: -40px;
+  background-color: #ececec
+}
+
 .video-block__title-text {
   font-size: 17px;
   font-weight: 700;
@@ -13,4 +38,18 @@
 
 .video-block__btn {
   line-height: 16px;
+}
+
+.video-block__text {
+  margin-left: 34px;
+}
+
+.video-block__btn {
+  margin-left: 10px;
+  width: 192px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 15px 26px 16px 26px;
+  border:2px solid #444444;
 }

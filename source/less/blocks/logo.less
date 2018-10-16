@@ -1,6 +1,43 @@
 .logo {
   display: block;
   background-image: url("../img/logo-mobile.svg");
-  width: 100px;
-  height: 20px;
+  width: 86px;
+  height: 35px;
+  margin: 0 auto;
+}
+.logo::before {
+    content: "";
+    display: block;
+    position: absolute;
+    margin-top: 55px;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    height: 1px;
+    background-color: #ececec
+  }
+.logo__close {
+  position: absolute;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  right: 40px;
+  top: 30px;
+  background-image: url("../img/icon-menu-close.svg");
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 21px;
+}
+@media (min-width: 768px) {
+  .logo {
+  display: block;
+  background-image: url("../img/logo-tablet.svg");
+  background-repeat: no-repeat;
+  width: 113px;
+  height: 46px;
+  margin-right: 300px;
+  }
 }

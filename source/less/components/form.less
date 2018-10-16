@@ -1,17 +1,51 @@
+.form {
+  width: 260px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.form__wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__radio {
+  width: 40px;
+}
+
 .form__section-title {
   font-size: 17px;
   font-weight: 700;
   line-height: 16px;
   color: #63d1bb;
+  position: relative;
+}
+
+.form__section-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 198px;
+  height: 1px;
+  background-color: #63d1bb;
+  right: 0px;
+  top: 10px;
 }
 
 .form__radio-label {
+  width: 180px;
   font-size: 17px;
   font-weight: 700;
   line-height: 18px;
+  margin-bottom: 20px;
+}
+
+.form__checkbox {
+  width: 40px;
 }
 
 .form__checkbox-label {
+  width: 180px;
   font-size: 17px;
   font-weight: 700;
   line-height: 18px;
@@ -21,6 +55,14 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 18px;
+}
+
+.form__field {
+  width: 260px;
+  border: none;
+  border-bottom: 2px solid #000000;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .form__field-label {
@@ -48,6 +90,9 @@
 }
 
 .form__btn {
+  display: block;
+  margin: auto;
   line-height: 16px;
   color: #444444;
+  margin-top: 20px;
 }

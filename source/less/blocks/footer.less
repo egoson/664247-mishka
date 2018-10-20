@@ -1,4 +1,5 @@
 .footer {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -13,37 +14,47 @@
   line-height: 30px;
 }
 
-.footer__social-block,
-.footer__copyright {
-  background-color: #f1f1f1;
-}
-
 .footer__social-wrap,
 .footer__copyright-wrap {
   display: flex;
   position: relative;
   width: 260px;
-  margin: auto;
-  justify-content: space-around;
+  margin:0 auto;
   align-items: center;
-  padding-top: 31px;
-  padding-bottom: 31px;
+}
+.footer__copyright-wrap {
+  width: 182px;
+  padding-top: 22px;
+  padding-bottom: 23px;
+
 }
 
+.copyright__link {
+  margin-left: 30px;
+}
+
+.footer__social-wrap {
+  width: 140px;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 29px;
+}
 .footer__copyright-wrap::before {
   content: "";
   position: absolute;
   display: block;
   top: 0px;
+  left: -40px;
   width: 260px;
   height: 1px;
   background-color: #e5e5e5;
 }
 
 .copyright__text {
-  font-size: 19px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 18px;
+  color: #000000;
 }
 
 .copyright__link {
@@ -55,21 +66,73 @@
 }
 
 .footer__map {
-  margin-bottom: 39px;
+  padding-bottom: 130px;
 }
 
+.footer__wrap {
+    width: 100%;
+  }
+.footer__wrap--background {
+  background-color: #f1f1f1;
+}
 .footer__btn {
-  margin: auto;
-  margin-bottom: 39px;
+  display: block;
+  width: 260px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer__hidden {
+  display: none;
 }
 
 @media (min-width: 768px) {
-  .footer {
+  .footer__map {
+    width: 768px;
+  }
+
+  .footer__btn {
+    bottom: 140px
+  }
+
+  .footer__social-block {
     width: 668px;
+    display: flex;
     margin: 0 auto;
   }
-  .footer__map-img {
-    width: 768px;
-    margin-left: -50px
+
+  .footer__hidden {
+    display: block;
+    align-self: center;
+  }
+}
+
+@media (min-width: 1150px) {
+  .footer__wrap--desktop {
+    display: flex;
+    width: 1050px;
+    margin: 0 auto;
+  }
+
+  .footer__wrap-contacts {
+    width: 525px;
+  }
+
+  .footer__social-block {
+    width: 1050px;
+  }
+
+   .footer__btn {
+    position: static;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+  }
+
+  .footer__map {
+    width: 525px;
   }
 }

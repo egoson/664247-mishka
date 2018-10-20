@@ -5,6 +5,11 @@
   height: 35px;
   margin: 0 auto;
 }
+
+.logo__wrapper {
+  width: 320px;
+}
+
 .logo::before {
     content: "";
     display: block;
@@ -24,8 +29,8 @@
   border: none;
   margin: 0;
   padding: 0;
-  right: 40px;
-  top: 30px;
+  right: 20px;
+  top: 5px;
   background-image: url("../img/icon-menu-close.svg");
   background-repeat: no-repeat;
   width: 22px;
@@ -39,5 +44,14 @@
   width: 113px;
   height: 46px;
   margin-right: 300px;
+  }
+}
+@media (min-width: 1050px) {
+  .logo {
+  display: block;
+  background-image: url("../img/logo-desktop.svg");
+  background-repeat: no-repeat;
+  width: 149px;
+  height: 72px;
   }
 }

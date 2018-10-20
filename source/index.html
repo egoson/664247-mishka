@@ -7,35 +7,46 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <header class="header">
-      <ul class="header__menu menu">
-        <li class="menu__item menu__item-order-1">
-          <a href="index.html" class="header__logo logo">
-            <img src="" alt="" class="logo__img">
-            <button class="logo__close" type="button"></button>
-          </a>
-        </li>
-        <li class="menu__item menu__item-order-2">
+    <header class="header menu">
+      <div class="logo__wrapper">
+        <a href="index.html" class="header__logo logo">
+          <img src="#" alt="" class="logo__img">
+        </a>
+        <button class="logo__close" type="button"></button>
+        <button class="burger" type="button"></button>
+      </div>
+      <ul class="header__menu header__menu--links">
+        <li class="menu__item menu__item--catalog">
           <a href="catalog.html" class="menu__item-link">Каталог товаров</a>
         </li>
-        <li class="menu__item menu__item-order-3">
+        <li class="menu__item menu__item--order">
           <a href="form.html" class="menu__item-link">Вязание на заказ</a>
         </li>
-        <li class="menu__item menu__item-order-4">
+      </ul>
+      <ul class="header__menu header__menu--search-form">
+        <li class="menu__item menu__item--form">
           <form class="menu__search" action="https://echo.htmlacademy.ru" method="get">
-            <img class="menu__item-img menu__item-img--position" src="img/icon-search.svg">
-            <input class="menu__search-block menu__search-block-hidden" type="search" placeholder="Поиск по сайту"></span>
+            <input class="menu__search-block menu__search-block-hidden" type="search" placeholder="Поиск по сайту" id="search"></span>
+            <label class="menu__search-label" for="search"><img class="menu__item-img menu__item-img--position" src="img/icon-search.svg"><span class="menu__item-text--hidden">Поиск по сайту</label>
           </form>
         </li>
-        <li class="menu__item menu__item-order-5">
-          <img class="menu__item-img" src="img/icon-cart.svg">
-          <a href="#" class="menu__item-link">Корзина: пока пуста</a>
-        </li>
-        <li class="menu__item menu__item-order-6 menu__item-mobile-hidden">
-          <p class="menu__item-text">Бесплатная доставка по России</p>
+        <li class="menu__item menu__item--cart-link">
+          <a href="#" class="menu__item-link">
+            <img class="menu__item-img" src="img/icon-cart.svg">Корзина: пока пуста
+          </a>
         </li>
       </ul>
-      <button class="burger" type="button"></button> <!-- здесь сменил btn на burger , потому-что от обычной кнопки, кторая встречается на сайте бургер отличается очень сильно и он в единственном роде -->
+      <ul class="header__menu header__menu--sales header__menu--hidden">
+        <li class="menu__item">
+          <a class="menu__item-link" href="#">Новые поступления</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item-link">Распродажа</a>
+        </li>
+      </ul>
+      <div class="menu__intro  menu__intro-mobile-hidden">
+        <p class="menu__intro-text">Бесплатная доставка по России</p>
+      </div>
     </header>
     <main class="main">
       <div class="intro">
@@ -137,37 +148,46 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__contacts contacts">
-        <b class="contacts__title">Контакты</b>
-        <img class="contacts__img" src="img/icon-flag.svg" width="47" height="81">
-        <table class="contacts-table">
-          <tr class="contacts-table__row contacts-table__row-1">
-            <th class="contacts-table__text-header">e&#8209;mail:</th>
-            <td class="contacts-table__text">
-              <a class="contacts-table__text-link" href="mailto:info@mimimishkashop.ru" class="contacts-table__link">info@mimimishkashop.ru</a>
-            </td>
-          </tr>
-          <tr class="contacts-table__row">
-            <th class="contacts-table__text-header">адрес:</th>
-            <td class="contacts-table__text">г. Санкт-Петербург,<br> ул. Большая<br> Конюшенная,<br> д. 19/8, офис 101</td>
-          </tr>
-        </table>
-      </div>
-      <section class="footer__map">
-        <img class="footer__map-img" src="img/map-mobile@1x.jpg" width="320" height="457" alt="карта">
-      </section>
-      <button class="footer__btn btn" type="button">Напишите нам</button>
-      <div class="footer__social-block">
-        <div class="footer__social-wrap">
-          <a class="social-link social-link--instagramm" href="#"><span class="visually-hidden">instagramm</span></a>
-          <a class="social-link social-link--facebook" href="#"><span class="visually-hidden">facebook</span></a>
-          <a class="social-link social-link--twitter" href="#"><span class="visually-hidden">twitter</span></a>
+      <div class="footer__wrap--desktop">
+        <div class="footer__wrap-contacts">
+          <div class="footer__contacts contacts">
+            <b class="contacts__title">Контакты</b>
+            <img class="contacts__img" src="img/icon-flag.svg" width="47" height="81">
+            <table class="contacts-table">
+              <tr class="contacts-table__row contacts-table__row-1">
+                <th class="contacts-table__text-header">e&#8209;mail:</th>
+                <td class="contacts-table__text">
+                  <a class="contacts-table__text-link" href="mailto:info@mimimishkashop.ru" class="contacts-table__link">info@mimimishkashop.ru</a>
+                </td>
+              </tr>
+              <tr class="contacts-table__row">
+                <th class="contacts-table__text-header">адрес:</th>
+                <td class="contacts-table__text">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</td>
+              </tr>
+            </table>
+          </div>
+          <button class="footer__btn btn" type="button">Напишите нам</button>
         </div>
+        <section class="footer__map">
+          <img class="footer__map-img" src="img/map-mobile@1x.jpg" width="320" height="457" alt="карта">
+        </section>
       </div>
-      <div class="footer__copyright copyright">
-        <div class="footer__copyright-wrap">
-          <b class="copyright__text">Разработано:</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+      <div class="footer__wrap footer__wrap--background">
+        <div class="footer__social-block">
+          <div class="footer__logo-wrap footer__hidden">
+            <img class="footer__logo" src="../img/logo-footer.svg" alt="лого футера" width="102" height="34">
+          </div>
+          <div class="footer__social-wrap">
+            <a class="social-link social-link--instagramm" href="#"><span class="visually-hidden">instagramm</span></a>
+            <a class="social-link social-link--facebook" href="#"><span class="visually-hidden">facebook</span></a>
+            <a class="social-link social-link--twitter" href="#"><span class="visually-hidden">twitter</span></a>
+          </div>
+          <div class="footer__copyright copyright">
+            <div class="footer__copyright-wrap">
+              <b class="copyright__text">Разработано:</b>
+              <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

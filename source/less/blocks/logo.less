@@ -8,6 +8,7 @@
 
 .logo__wrapper {
   width: 320px;
+  margin-bottom: 22px;
 }
 
 .logo::before {
@@ -31,8 +32,6 @@
   padding: 0;
   right: 20px;
   top: 5px;
-  background-image: url("../img/icon-menu-close.svg");
-  background-repeat: no-repeat;
   width: 22px;
   height: 21px;
 }
@@ -48,10 +47,18 @@
 }
 @media (min-width: 1050px) {
   .logo {
-  display: block;
   background-image: url("../img/logo-desktop.svg");
-  background-repeat: no-repeat;
-  width: 149px;
+  width: auto;
   height: 72px;
+  margin-right: auto;
+  }
+
+  .logo::before {
+    margin-top: 80px;
+  }
+
+  .logo__wrapper {
+    width: 149px;
+    margin-bottom: 0
   }
 }

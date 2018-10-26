@@ -12,7 +12,11 @@
         <a href="index.html" class="header__logo logo">
           <img src="#" alt="" class="logo__img">
         </a>
-        <button class="logo__close" type="button"></button>
+        <button class="logo__close" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="21px" height="20px" viewBox="0 0 20.514 20.512" enable-background="new 0 0 20.514 20.512" xml:space="preserve">
+            <polygon fill="#231F20" points="20.513,1.414 19.099,0 10.256,8.842 1.414,0 0,1.414 8.842,10.256 0,19.098 1.414,20.512 10.256,11.67 19.099,20.512 20.513,19.098 11.671,10.256 "/>
+          </svg>
+        </button>
         <button class="burger" type="button"></button>
       </div>
       <ul class="header__menu header__menu--links">
@@ -24,10 +28,10 @@
         </li>
       </ul>
       <ul class="header__menu header__menu--search-form">
-        <li class="menu__item menu__item--form">
+        <li class="menu__item menu__item--form ">
           <form class="menu__search" action="https://echo.htmlacademy.ru" method="get">
             <input class="menu__search-block menu__search-block-hidden" type="search" placeholder="Поиск по сайту" id="search"></span>
-            <label class="menu__search-label" for="search"><img class="menu__item-img menu__item-img--position" src="img/icon-search.svg"><span class="menu__item-text--hidden">Поиск по сайту</label>
+            <label class="menu__search-label menu__item-link menu__item-link--padding" for="search"><img class="menu__item-img menu__item-img--position" src="img/icon-search.svg"><span class="menu__item-text--hidden">Поиск по сайту</label>
           </form>
         </li>
         <li class="menu__item menu__item--cart-link">
@@ -70,33 +74,39 @@
         </li>
       </ul>
       <section class="bestseller">
-        <p class="bestseller__good">Вязаные корзинки</p>
-        <h2 class="bestseller__title">Товар недели</h2>
-        <div class="bestseller__wrap-bestseller">
-          <div class="bestseller__wrap-description">
-            <p class="bestseller__label">Экологическая чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-            <table class="bestseller-table">
-              <tr class="bestseller-table__row"> <!-- ширину 260, флекс, бордер боттом -->
-                <th class="bestseller-table__data">Цвет</th> <!-- здесь задаю ширину 97пх по макету расстояние от первой колонки до второй, текст элигн старт...
-                я посчитал пиксели, первый столбик ровно 1/3 от ширины макета, то есть можно сделать через флекс шринк 1/3 - первый столбик, второй 2/3. не помню как он точно задается, это гляну потом.-->
-                <td class="bestseller-table__data">&laquo;Тифани/серый&raquo;</td> <!-- флекс шринк 2/3, текст элигн старт -->
-              </tr>
-              <tr class="bestseller-table__row">
-                <th class="bestseller-table__data">Диаметр</th>
-                <td class="bestseller-table__data">25 см</td>
-              </tr>
-              <tr class="bestseller-table__row">
-                <th class="bestseller-table__data">Высота</th>
-                <td class="bestseller-table__data">15 см</td>
-              </tr>
-            </table>
-            <div class="bestseller__wrap-btn">
-            <p class="bestseller__price">Цена: 990 руб.</p> <!-- цена же отдельный блок , и она наверняка везде одинаково выглядит -->
-            <a class="bestseller__btn btn" type="button">Заказать</a>
+        <div class="bestseller__header">
+          <p class="bestseller__good">Вязаные корзинки</p>
+          <h2 class="bestseller__title">Товар недели</h2>
+        </div>
+        <div class="bestseller__inner">
+          <div class="bestseller__wrap-bestseller">
+            <div class="bestseller__wrap-description">
+              <p class="bestseller__label">Экологическая чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+              <table class="bestseller-table">
+                <tr class="bestseller-table__row"> <!-- ширину 260, флекс, бордер боттом -->
+                  <th class="bestseller-table__data">Цвет</th> <!-- здесь задаю ширину 97пх по макету расстояние от первой колонки до второй, текст элигн старт...
+                  я посчитал пиксели, первый столбик ровно 1/3 от ширины макета, то есть можно сделать через флекс шринк 1/3 - первый столбик, второй 2/3. не помню как он точно задается, это гляну потом.-->
+                  <td class="bestseller-table__data">&laquo;Тифани/серый&raquo;</td> <!-- флекс шринк 2/3, текст элигн старт -->
+                </tr>
+                <tr class="bestseller-table__row">
+                  <th class="bestseller-table__data">Диаметр</th>
+                  <td class="bestseller-table__data">25 см</td>
+                </tr>
+                <tr class="bestseller-table__row">
+                  <th class="bestseller-table__data">Высота</th>
+                  <td class="bestseller-table__data">15 см</td>
+                </tr>
+              </table>
+              <div class="bestseller__wrap-btn">
+              <p class="bestseller__price">Цена: 990 руб.</p> <!-- цена же отдельный блок , и она наверняка везде одинаково выглядит -->
+              <a class="bestseller__btn btn" type="button">Заказать</a>
+              </div>
             </div>
           </div>
+          <div class="bestseller__img-wrap">
+            <img class="bestseller__img" src="img/triple-set-mobile@1x.jpg">  <!-- здесь конечно сомнения по поводу имени-->
+          </div>
         </div>
-        <img class="bestseller__img" src="img/triple-set-mobile@1x.jpg">  <!-- здесь конечно сомнения по поводу имени-->
       </section>
       <section class="about-us">
         <div class="about-us__wrapper">

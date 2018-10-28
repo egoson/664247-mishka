@@ -73,41 +73,43 @@
           </a>
         </li>
       </ul>
-      <section class="bestseller">
-        <div class="bestseller__header">
-          <p class="bestseller__good">Вязаные корзинки</p>
-          <h2 class="bestseller__title">Товар недели</h2>
-        </div>
-        <div class="bestseller__inner">
-          <div class="bestseller__wrap-bestseller">
-            <div class="bestseller__wrap-description">
-              <p class="bestseller__label">Экологическая чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-              <table class="bestseller-table">
-                <tr class="bestseller-table__row"> <!-- ширину 260, флекс, бордер боттом -->
-                  <th class="bestseller-table__data">Цвет</th> <!-- здесь задаю ширину 97пх по макету расстояние от первой колонки до второй, текст элигн старт...
-                  я посчитал пиксели, первый столбик ровно 1/3 от ширины макета, то есть можно сделать через флекс шринк 1/3 - первый столбик, второй 2/3. не помню как он точно задается, это гляну потом.-->
-                  <td class="bestseller-table__data">&laquo;Тифани/серый&raquo;</td> <!-- флекс шринк 2/3, текст элигн старт -->
-                </tr>
-                <tr class="bestseller-table__row">
-                  <th class="bestseller-table__data">Диаметр</th>
-                  <td class="bestseller-table__data">25 см</td>
-                </tr>
-                <tr class="bestseller-table__row">
-                  <th class="bestseller-table__data">Высота</th>
-                  <td class="bestseller-table__data">15 см</td>
-                </tr>
-              </table>
-              <div class="bestseller__wrap-btn">
-              <p class="bestseller__price">Цена: 990 руб.</p> <!-- цена же отдельный блок , и она наверняка везде одинаково выглядит -->
-              <a class="bestseller__btn btn" type="button">Заказать</a>
+      <div class="bestseller__wrap">
+        <section class="bestseller">
+          <div class="bestseller__header">
+            <p class="bestseller__good">Вязаные корзинки</p>
+            <h2 class="bestseller__title">Товар недели</h2>
+          </div>
+          <div class="bestseller__inner">
+            <div class="bestseller__wrap-bestseller">
+              <div class="bestseller__wrap-description">
+                <p class="bestseller__label">Экологическая чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+                <table class="bestseller-table">
+                  <tr class="bestseller-table__row"> <!-- ширину 260, флекс, бордер боттом -->
+                    <th class="bestseller-table__data">Цвет</th> <!-- здесь задаю ширину 97пх по макету расстояние от первой колонки до второй, текст элигн старт...
+                    я посчитал пиксели, первый столбик ровно 1/3 от ширины макета, то есть можно сделать через флекс шринк 1/3 - первый столбик, второй 2/3. не помню как он точно задается, это гляну потом.-->
+                    <td class="bestseller-table__data">&laquo;Тифани/серый&raquo;</td> <!-- флекс шринк 2/3, текст элигн старт -->
+                  </tr>
+                  <tr class="bestseller-table__row">
+                    <th class="bestseller-table__data">Диаметр</th>
+                    <td class="bestseller-table__data">25 см</td>
+                  </tr>
+                  <tr class="bestseller-table__row">
+                    <th class="bestseller-table__data">Высота</th>
+                    <td class="bestseller-table__data">15 см</td>
+                  </tr>
+                </table>
+                <div class="bestseller__wrap-btn">
+                <p class="bestseller__price">Цена: 990 руб.</p> <!-- цена же отдельный блок , и она наверняка везде одинаково выглядит -->
+                <a class="bestseller__btn btn" type="button">Заказать</a>
+                </div>
               </div>
             </div>
+            <div class="bestseller__img-wrap">
+              <img class="bestseller__img" src="img/triple-set-mobile@1x.jpg">  <!-- здесь конечно сомнения по поводу имени-->
+            </div>
           </div>
-          <div class="bestseller__img-wrap">
-            <img class="bestseller__img" src="img/triple-set-mobile@1x.jpg">  <!-- здесь конечно сомнения по поводу имени-->
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <section class="about-us">
         <div class="about-us__wrapper">
           <h2 class="about-us__title">Коротко о нас:</h2>
@@ -130,7 +132,7 @@
             </li>
             <li class="advantages-list__item advantage-5">
               <img class="advantage__icon" src="img/icon-feature-rocket.svg" alt="ракета">
-              <span class="advantage__text">Поддержка отечественного производителя</span>
+              <span class="advantage__text">Поддержка&nbsp;отечественного производителя</span>
             </li>
             <li class="advantages-list__item advantage-6">
               <img class="advantage__icon" src="img/icon-feature-gift.svg" alt="подарочная упаковка">

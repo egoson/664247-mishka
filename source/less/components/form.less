@@ -160,7 +160,7 @@
   width: 188px;
   height: 1px;
   background-color: #63d1bb;
-  right: 0px;
+  left: 72px;
   top: 10px;
   }
 }
@@ -173,6 +173,7 @@
 }
 
 .form__field-textarea {
+  width: 240px;
   font-size: 17px;
   font-weight: 400;
   letter-spacing: 18px;
@@ -181,6 +182,8 @@
   padding: 10px;
   border:2px solid #444444;
   padding-bottom: 100px;
+  resize: none;
+  overflow: auto;
 }
 
 .form__btn {
@@ -200,28 +203,257 @@
   background-color: #ffffff;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .form {
-    width: 668px;
+    width: auto;
     display: flex;
     flex-wrap: wrap;
   }
 
-  .form__wrap {
+  .form__field {
+    width: 320px;
+    margin: 0;
+    padding: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-grow: 1;
+    margin-bottom: 20px;
+    padding-left: 18px;
+  }
+
+  .form__field-headline {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    margin-right: 25px;
+    padding-bottom: 28px;
+  }
+
+  .form-block__wrapper {
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .form__wrap {
+    width: 501px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__field-wrap {
+    width: 668px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  .form__field-wrap-background {
+    background-color: #f1f1f1;
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+
+  .form__field--phone {
+    width: 350px;
+    background-color: #f1f1f1
+  }
+
+  .form__field--email {
+    width: 350px;
+    background-color: #f1f1f1;
+  }
+
+  .form__field-label {
+    width: 167px;
+    padding-top: 15px;
+  }
+
+  .form__radio-wrap {
+    width: 668px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .form__checkbox-background {
+    margin: 0 auto;
+    background-color: #f1f1f1;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .form__wrapper {
+    width: 668px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__checkbox-wrap {
+    width: 668px;
+    margin: 0 auto;
+    display: flex;
   }
 
   .form__section-title {
+    margin: 0;
     width: 167px;
     &::before {
       content: none;
     }
   }
+
+  .form__section-title--padding {
+    padding-top: 13px;
+    box-sizing: border-box;
+  }
+
   .form__field-label--green {
     &::after {
       content: none;
     }
   }
 
+  .form__radio-label {
+    width: 400px;
+    font-size: 19px;
+    line-height: 18px;
+    margin-bottom: 50px
+  }
+
+  .form__checkbox-label {
+    width: 150px;
+  }
+
+  .form__field-textarea {
+    padding-left: 15px;
+    padding-bottom: 106px;
+  }
+
+  .form__field--phone ::-webkit-input-placeholder {
+    font-size: 19px;
+    background-color: #f1f1f1
+  }
+
+  .form__field--phone ::-moz-placeholder {
+    font-size: 19px;
+    background-color: #f1f1f1
+  }
+
+  .form__field--phone :-moz-placeholder {
+    font-size: 19px;
+    background-color: #f1f1f1
+  }
+
+  .form__field--phone :-ms-input-placeholder {
+    font-size: 19px;
+    background-color: #f1f1f1
+  }
+
+  ::-webkit-input-placeholder {
+    font-size: 19px;
+  }
+
+  ::-moz-placeholder {
+    font-size: 19px;
+  }
+
+  :-moz-placeholder {
+    font-size: 19px;
+  }
+
+  :-ms-input-placeholder {
+    font-size: 19px;
+  }
+
+  .form__wrap-warning-btn {
+    width: 668px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .form__warning {
+    order: 1;
+    align-self: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .form__btn {
+    margin: auto;
+    margin-left: 0;
+    width: 230px;
+  }
+
+  .form__warning {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+}
+
+@media (min-width: 1050px) {
+  .form__radio-wrap {
+    width: 1050px;
+  }
+
+  .form__section-title {
+    width: 175px;
+    text-align: center;
+  }
+
+  .form__wrap {
+    width: 875px
+  }
+
+  .form__checkbox-wrap {
+    width: 1050px;
+  }
+
+  .form__checkbox-label {
+    width: 210px;
+  }
+
+  .form__wrapper {
+    width: 1050px;
+  }
+
+  .form__wrap--width {
+    width: 700px;
+  }
+
+  .form__field {
+    width: 550px;
+  }
+
+  .form__field-wrap {
+    width: 1050px;
+  }
+
+  .form__field-label {
+    text-align: center;
+    width: 175px;
+  }
+
+  .form__field--phone {
+    box-sizing: border-box;
+    width: 700px;
+    flex-grow: 0;
+    margin-right: 50px;
+  }
+
+  .form__field--email {
+    box-sizing: border-box;
+    width: 700px;
+    flex-grow: 0;
+  }
+
+  .form__field-textarea {
+    max-width: 685px;
+  }
+
+  .form__wrap-warning-btn {
+    width: 700px;
+  }
 }

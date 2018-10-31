@@ -2,6 +2,17 @@
   width: 260px;
   display: flex;
   margin-bottom: 20px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -10px;
+    width: 100%;
+    height: 1px;
+    background-color: #ececec;
+
+  }
 }
 
 .bestseller-table__data {

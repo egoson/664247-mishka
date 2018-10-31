@@ -1,8 +1,18 @@
 .reviews {
+  position: relative;
   padding-bottom: 85px;
-  background-image: url("../img/review@1x.jpg");
-    background-repeat: no-repeat;
-    background-position-x: 45px;
+  &::after {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 23px;
+      background-image: url("../img/bg-zigzag-line.svg");
+      bottom: 0px;
+      background-size: 110%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
 }
 
 .reviews__wrapper {
@@ -61,6 +71,7 @@
   text-decoration: none;
   bottom: -80px;
   left: 50%;
+  width: 260px;
   transform: translateX(-50%);
   line-height: 16px;
   color: #444444;
@@ -68,9 +79,10 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
+  box-sizing: border-box;
   text-transform: uppercase;
   text-align: center;
-  padding: 19px 80px 20px 81px;
+  padding: 19px 60px 20px 61px;
   border:2px solid #444444;
   background-color: #ffffff;
 }

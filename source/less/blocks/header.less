@@ -1,7 +1,4 @@
 .header {
-    width: 320px;
-    margin: 0 auto;
-    margin-top: 22px;
     position: relative;
     z-index: 1;
   }
@@ -13,7 +10,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  width: 260px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -25,7 +22,6 @@
   .header {
     width: 768px;
     margin: 0 auto;
-    margin-top: 22px;
   }
 
   .header__menu {
@@ -40,17 +36,23 @@
     margin-top: 15px;
   }
 
+  .header__menu--links .menu__item-link {
+    text-align: left;
+  }
+
   .header__menu--search-form {
     position: relative;
     margin: 0;
     margin-left: auto;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-left: 1px solid #ececec
   }
 
 }
 @media (min-width: 1150px) {
   .header {
     width: 1050px;
-    margin-top: 9px;
   }
 
   .header__menu--hidden {
@@ -79,8 +81,9 @@
 
   .header__menu--search-form {
     order: 2;
-    width: 450px;
+    width: auto;
     text-align: right;
+    padding: 0;
   }
 
   .header__menu--sales {

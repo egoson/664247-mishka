@@ -1,5 +1,23 @@
 .reviews {
-  margin-bottom: 45px;
+  position: relative;
+  padding-bottom: 85px;
+  &::after {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 23px;
+      background-image: url("../img/bg-zigzag-line.svg");
+      bottom: 0px;
+      background-size: 110%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+}
+
+.reviews__wrapper {
+  width: 260px;
+  position: relative;
 }
 
 .reviews__title {
@@ -25,12 +43,96 @@
   font-size: 17px;
   font-weight: 400;
   line-height: 30px;
+  text-decoration: none;
+  color: #444444;
+}
+
+.reviews__wrap-btn {
+  display: flex;
+  margin-bottom: 38px;
 }
 
 .reviews__prev {
+  display: block;
+  width: 130px;
+  height: 52px;
   background-image: url("img/icon-left-arrow.svg");
 }
 
 .reviews__next {
+  display: block;
+  width: 130px;
+  height: 52px;
   background-image: url("img/icon-right-arrow.svg");
+}
+
+.reviews__write {
+  position: absolute;
+  text-decoration: none;
+  bottom: -80px;
+  left: 50%;
+  width: 260px;
+  transform: translateX(-50%);
+  line-height: 16px;
+  color: #444444;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 19px 60px 20px 61px;
+  border:2px solid #444444;
+  background-color: #ffffff;
+}
+
+.reviews__wrapper {
+  width: 260px;
+  margin: auto;
+}
+
+.reviews__item {
+  margin: 0;
+  margin-bottom: 36px;
+}
+
+@media (min-width: 768px) {
+  .reviews {
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position-x: 45px;
+  }
+
+  .reviews__wrapper {
+    width: 668px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .reviews__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .reviews__text {
+    font-size: 17px;
+  }
+
+  .reviews__write {
+    margin-left: auto;
+    display: block;
+    align-self: center;
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+  }
+
+  .reviews__wrap-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }

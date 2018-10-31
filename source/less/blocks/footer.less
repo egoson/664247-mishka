@@ -1,49 +1,148 @@
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__contacts {
+  width: 260px;
+}
+
 .contacts__title {
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
 }
 
-.contacts-table {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 30px;
-  color: #444444;
+.footer__social-wrap,
+.footer__copyright-wrap {
+  display: flex;
+  position: relative;
+  width: 260px;
+  margin:0 auto;
+  align-items: center;
+}
+.footer__copyright-wrap {
+  width: 182px;
+  padding-top: 22px;
+  padding-bottom: 23px;
+
 }
 
-.footer__social-block {
-  background-color: #f1f1f1;
+.footer__social-wrap {
+  width: 140px;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 29px;
 }
-
-.social-link {
+.footer__copyright-wrap::before {
+  content: "";
+  position: absolute;
   display: block;
-  width: 22px;
-  height: 21px;
-  background-repeat: no-repeat;
+  top: 0px;
+  left: -40px;
+  width: 260px;
+  height: 1px;
+  background-color: #e5e5e5;
 }
 
-.social-link--instagramm {
-  background-image: url("../img/icon-insta.svg");
-}
-
-.social-link--facebook {
-  background-image: url("../img/icon-fb.svg");
-}
-
-.social-link--twitter {
-  background-image: url("../img/icon-twitter.svg");
-}
-
-.copyright__text {
+.footer__copyright-text {
   font-size: 19px;
   font-weight: 700;
   line-height: 18px;
+  color: #000000;
 }
 
-.copyright__link {
+.footer__copyright-link {
   display: block;
   background-image: url("../img/logo-htmlacademy.svg");/*здесь как-то по другому надо вставлять свг, чтобы цвет менять*/
   background-repeat: no-repeat;
   width: 27px;
   height: 34px;
+  margin-left: auto;
+}
+
+.footer__map {
+  padding-bottom: 160px;
+  width: 100%;
+  text-align: center;
+}
+
+.footer__wrap {
+    width: 100%;
+  }
+.footer__wrap--background {
+  background-color: #f1f1f1;
+}
+.footer__btn {
+  display: block;
+  width: 260px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 16px;
+  color: #444444;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 19px 33px 20px 32px;
+  border:2px solid #444444;
+  background-color: #ffffff;
+}
+
+.footer__hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .footer__map {
+    width: 100%;
+  }
+
+  .footer__btn {
+    bottom: 140px
+  }
+
+  .footer__social-block {
+    width: 668px;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .footer__hidden {
+    display: block;
+    align-self: center;
+  }
+}
+
+@media (min-width: 1150px) {
+  .footer__wrap--desktop {
+    display: flex;
+    width: 1050px;
+    margin: 0 auto;
+  }
+
+  .footer__wrap-contacts {
+    width: 525px;
+  }
+
+  .footer__social-block {
+    width: 1050px;
+  }
+
+   .footer__btn {
+    position: static;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+  }
+
+  .footer__map {
+    width: 100%;
+  }
 }

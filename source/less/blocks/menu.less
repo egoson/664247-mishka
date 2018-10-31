@@ -1,5 +1,153 @@
 .menu {
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 24px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__item-link {
+  position: relative;
+  text-decoration:none;
+  color: #000000;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  width: 260px;
+  padding-left: 46px;
+  margin:0 auto;
+  padding-right: 10px;
+}
+
+.menu__item {
+  border-bottom: 1px solid #ececec
+}
+
+
+.menu__item-mobile-hidden {
+  display: none;
+}
+
+.menu__search-block-hidden {
+  display: none;
+}
+
+.menu__item-img {
+  position: absolute;
+  left: 0px;
+  opacity: 0.2;
+}
+
+.menu__intro-mobile-hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .menu {
+    width: 668px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .menu__item {
+  margin-top: 0px;
+  border-bottom: none;
+  }
+
+  .menu__item--catalog,
+  .menu__item--order {
+    width: 167px;
+    padding-left: 0;
+    font-size: 15px;
+  }
+
+  .menu__item-link {
+    padding: 0;
+    text-align: right;
+  }
+
+  .menu__item-mobile-hidden {
+    display: block;
+  }
+
+  .menu__item-text--hidden {
+    display: none;
+  }
+
+  .menu__item--form {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .menu__item-img {
+  opacity: 0.2;
+  left: 20px;
+  }
+
+  .menu__item-img--position {
+    left: -60px;
+  }
+
+  .logo__close,
+  .menu__search-block-hidden {
+    display: none;
+  }
+
+  .menu__item-text {
+    margin: 0;
+  }
+
+  .menu__intro-mobile-hidden {
+    display: block;
+    order: 2;
+    font-size: 15px;
+    line-height: 24px;
+    color: #444444;
+    font-weight: 400;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 1150px) {
+  .menu {
+    width: 1050px;
+  }
+
+  .menu__item-link {
+    width: auto;
+    padding-top: 31px;
+    padding-bottom: 33px;
+    text-align: left;
+  }
+
+  .menu__item-link--border {
+    border-right: 1px solid #ececec
+  }
+
+  .menu__item {
+    padding-left: 0;
+    margin-right: 60px;
+  }
+
+  .menu__item-link--padding {
+    padding: 0
+  }
+
+  .menu__item--cart-link {
+    margin-right: 0px;
+  }
+
+  .menu__item--cart-link .menu__item-link {
+    padding-left: 68px;
+  }
+
+  .menu__item-img--position {
+    left: -40px;
+    top: 32px;
+  }
 }

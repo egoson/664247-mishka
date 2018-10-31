@@ -2,113 +2,155 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <header class="header">
-      <a href="#" class="header__logo logo">
-        <img src="" alt="" class="logo__img">
-      </a>
-      <ul class="header__menu menu">
-        <li class="menu__item">
-          <a href="#" class="menu__item-link">Каталог товаров</a>
+    <header class="header menu">
+      <div class="logo__wrapper">
+        <a href="index.html" class="header__logo logo">
+          <img src="#" alt="" class="logo__img">
+        </a>
+        <button class="logo__close" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="21px" height="20px" viewBox="0 0 20.514 20.512" enable-background="new 0 0 20.514 20.512" xml:space="preserve">
+            <polygon fill="#231F20" points="20.513,1.414 19.099,0 10.256,8.842 1.414,0 0,1.414 8.842,10.256 0,19.098 1.414,20.512 10.256,11.67 19.099,20.512 20.513,19.098 11.671,10.256 "/>
+          </svg>
+        </button>
+        <button class="burger" type="button"></button>
+      </div>
+      <ul class="header__menu header__menu--links">
+        <li class="menu__item menu__item--catalog">
+          <a href="catalog.html" class="menu__item-link">Каталог товаров</a>
         </li>
-        <li class="menu__item">
-          <a href="#" class="menu__item-link">Вязание на заказ</a>
-        </li>
-        <li class="menu__item">
-          <form class="menu__search" action="https://echo.htmlacademy.ru" method="get">
-            <img class="menu__item-img" src="#">
-            <input class="menu__search-block" type="search" placeholder="Поиск по сайту"></span>
-          </form>
-        </li>
-        <li class="menu__item">
-          <img class="menu__item-img" src="#">
-          <a href="#" class="menu__item-link">Корзина: пока пуста</a>
+        <li class="menu__item menu__item--order">
+          <a href="form.html" class="menu__item-link">Вязание на заказ</a>
         </li>
       </ul>
-      <button class="burger" type="button"></button> <!-- здесь сменил btn на burger , потому-что от обычной кнопки, кторая встречается на сайте бургер отличается очень сильно и он в единственном роде -->
+      <ul class="header__menu header__menu--search-form">
+        <li class="menu__item menu__item--form ">
+          <form class="menu__search" action="https://echo.htmlacademy.ru" method="get">
+            <input class="menu__search-block menu__search-block-hidden" type="search" placeholder="Поиск по сайту" id="search"></span>
+            <label class="menu__search-label menu__item-link menu__item-link--padding" for="search"><img class="menu__item-img menu__item-img--position" src="img/icon-search.svg"><span class="menu__item-text--hidden">Поиск по сайту</label>
+          </form>
+        </li>
+        <li class="menu__item menu__item--cart-link">
+          <a href="#" class="menu__item-link">
+            <img class="menu__item-img" src="img/icon-cart.svg">Корзина: пока пуста
+          </a>
+        </li>
+      </ul>
+      <ul class="header__menu header__menu--sales header__menu--hidden">
+        <li class="menu__item">
+          <a class="menu__item-link" href="#">Новые поступления</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item-link">Распродажа</a>
+        </li>
+      </ul>
+      <div class="menu__intro  menu__intro-mobile-hidden">
+        <p class="menu__intro-text">Бесплатная доставка по России</p>
+      </div>
     </header>
     <main class="catalog">
       <div class="catalog__wrapper">
         <h1 class="catalog__title">Каталог товаров</h1>
       </div>
-      <div class="catalog-list">
-        <div class="catalog-list__item catalog-item">
+      <div class="catalog-list-catalog">
+        <div class="catalog-list-catalog__item catalog-item">
           <a class="catalog-item__img" href="#">
-            <img src="#" alt="заяц">
+            <img src="img/photo-hare-mobile@1x.jpg" alt="заяц">
           </a>
-          <h2 class="catalog-item__title">
-            <a href="#">Зайчик попрыгайчик</a>
-          </h2>
-          <p class="catalog-item__text">Рост 30см, вес 200 г</p>
-          <div class="catalog-item__price-row">
-            <p class="catalog-item__price">1200 руб.</p>
-            <a class="catalog-item__btn" href="#">
-              <img src="#" alt="корзинка">
-            </a>
+          <div class="catalog-item__wrap">
+            <div class="catalog-item__wrap-text">
+              <h2 class="catalog-item__title">
+                <a class="catalog-item__title-text" href="#">Зайчик попрыгайчик</a>
+              </h2>
+              <p class="catalog-item__text">Рост 30см, вес 200 г</p>
+            </div>
+            <div class="catalog-item__price-row">
+              <p class="catalog-item__price">1200 руб.</p>
+              <a class="catalog-item__btn" href="#">
+                <img class="catalog-item__cart" src="img/icon-cart.svg" alt="корзинка">
+              </a>
+            </div>
           </div>
         </div>
-        <div class="catalog-list__item catalog-item">
+        <div class="catalog-list-catalog__item catalog-item">
           <a class="catalog-item__img" href="#">
-            <img src="#" alt="корзинка для белья">
+            <img src="img/photo-bowl-mobile@1x.jpg" alt="корзинка для белья">
           </a>
-          <h2 class="catalog-item__title">
-            <a href="#">Корзинка для белья</a>
-          </h2>
-          <p class="catalog-item__text">Диаметр 15 см, высота 10 см</p>
-          <div class="catalog-item__price-row">
-            <p class="catalog-item__price">690 руб.</p>
-            <a class="catalog-item__btn" href="#">
-              <img src="#" alt="корзинка">
-            </a>
+          <div class="catalog-item__wrap">
+            <h2 class="catalog-item__title">
+              <a class="catalog-item__title-text" href="#">Корзинка для белья</a>
+            </h2>
+            <p class="catalog-item__text">Диаметр 15 см, высота 10 см</p>
+            <div class="catalog-item__price-row">
+              <p class="catalog-item__price">690 руб.</p>
+              <a class="catalog-item__btn" href="#">
+                <img class="catalog-item__cart" src="img/icon-cart.svg" alt="корзинка">
+              </a>
+            </div>
           </div>
         </div>
-        <div class="catalog-list__item catalog-item">
+        <div class="catalog-list-catalog__item catalog-item">
           <a class="catalog-item__img" href="#">
-            <img src="#" alt="большая корзинка для игрушек">
+            <img src="img/photo-toys-mobile@1x.jpg" alt="большая корзинка для игрушек">
           </a>
-          <h2 class="catalog-item__title">
-            <a href="#">Большая корзинка для игрушек</a>
-          </h2>
-          <p class="catalog-item__text">Диаметр 30 см, высота 30 см</p>
-          <div class="catalog-item__price-row">
-            <p class="catalog-item__price">1500 руб.</p>
-            <a class="catalog-item__btn" href="#">
-              <img src="#" alt="корзинка">
-            </a>
+          <div class="catalog-item__wrap">
+            <h2 class="catalog-item__title">
+              <a class="catalog-item__title-text" href="#">Большая корзинка для игрушек</a>
+            </h2>
+            <p class="catalog-item__text catalog-item__text--margin">Диаметр 30 см, высота 30 см</p>
+            <div class="catalog-item__price-row">
+              <p class="catalog-item__price">1500 руб.</p>
+              <a class="catalog-item__btn" href="#">
+                <img class="catalog-item__cart" src="img/icon-cart.svg" alt="корзинка">
+              </a>
+            </div>
           </div>
         </div>
       </div>
       <section class="video-block">
         <div class="video-block__wrapper">
-          <h2 class="video-block__title">
-            <span class="video-block__title-icon">
-              <img src="#" alt="видеокамера">
-            </span>
-            <span class="video-block__title-text">
-              Процесс производства
-            </span>
-          </h2>
           <div class="video">
-            <img class="video__poster" alt="видео: процесс производства">
-            <button type="button" class="video__btn"></button>
+            <img class="video__img" src="img/video-desktop@1x.jpg" class="video__poster" alt="видео: процесс производства">
+            <img class="video__img-play" src="../img/icon-play.svg" alt="Воспроизвести">
           </div>
-          <p class="video-block__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <div class="video__wrapper">
+            <h2 class="video-block__title">
+              <span class="video-block__title-icon">
+                <img src="../img/icon-video.svg" alt="видеокамера">
+              </span>
+              <span class="video-block__title-text">
+                <p>Процесс производства</p>
+              </span>
+            </h2>
+            <p class="video-block__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          </div>
           <a class="video-block__btn btn" href="#">Сделать заказ</a>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__social-block">
-        <a class="social-link social-link--instagramm" href="#">instagramm</a>
-        <a class="social-link social-link--facebook" href="#">facebook</a>
-        <a class="social-link social-link--twitter" href="#">twitter</a>
-      </div>
-      <div class="footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <div class="footer__wrap footer__wrap--background">
+        <div class="footer__social-block">
+          <div class="footer__logo-wrap footer__hidden">
+            <img class="footer__logo" src="../img/logo-footer.svg" alt="лого футера" width="102" height="34">
+          </div>
+          <div class="footer__social-wrap">
+            <a class="social-link social-link--instagramm" href="#"><span class="visually-hidden">instagramm</span></a>
+            <a class="social-link social-link--facebook" href="#"><span class="visually-hidden">facebook</span></a>
+            <a class="social-link social-link--twitter" href="#"><span class="visually-hidden">twitter</span></a>
+          </div>
+          <div class="footer__copyright copyright">
+            <div class="footer__copyright-wrap">
+              <b class="copyright__text">Разработано:</b>
+              <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   </body>

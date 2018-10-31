@@ -2,38 +2,65 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <header class="header">
-      <a href="#" class="header__logo logo">
-        <img src="" alt="" class="logo__img">
-      </a>
-      <ul class="header__menu menu">
-        <li class="menu__item">
-          <a href="#" class="menu__item-link">Каталог товаров</a>
+    <header class="header menu">
+      <div class="logo__wrapper">
+        <a href="index.html" class="header__logo logo">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+          </picture>
+        </a>
+        <button class="logo__close" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="21px" height="20px" viewBox="0 0 20.514 20.512" enable-background="new 0 0 20.514 20.512" xml:space="preserve">
+            <polygon fill="#231F20" points="20.513,1.414 19.099,0 10.256,8.842 1.414,0 0,1.414 8.842,10.256 0,19.098 1.414,20.512 10.256,11.67 19.099,20.512 20.513,19.098 11.671,10.256 "/>
+          </svg>
+        </button>
+        <button class="burger" type="button"></button>
+      </div>
+      <ul class="header__menu header__menu--links">
+        <li class="menu__item menu__item--catalog">
+          <a href="catalog.html" class="menu__item-link menu__item-link--border">Каталог товаров</a>
         </li>
-        <li class="menu__item">
-          <a href="#" class="menu__item-link">Вязание на заказ</a>
-        </li>
-        <li class="menu__item">
-          <form class="menu__search" action="https://echo.htmlacademy.ru" method="get">
-            <img class="menu__item-img" src="img/icon-search.svg">
-            <input class="menu__search-block" type="search" placeholder="Поиск по сайту"></span>
-          </form>
-        </li>
-        <li class="menu__item">
-          <img class="menu__item-img" src="img/icon-cart.svg">
-          <a href="#" class="menu__item-link">Корзина: пока пуста</a>
+        <li class="menu__item menu__item--order">
+          <a href="form.html" class="menu__item-link">Вязание на заказ</a>
         </li>
       </ul>
-      <button class="burger" type="button"></button> <!-- здесь сменил btn на burger , потому-что от обычной кнопки, кторая встречается на сайте бургер отличается очень сильно и он в единственном роде -->
+      <ul class="header__menu header__menu--search-form">
+        <li class="menu__item menu__item--form ">
+          <form class="menu__search" action="https://echo.htmlacademy.ru" method="get">
+            <input class="menu__search-block menu__search-block-hidden" type="search" placeholder="Поиск по сайту" id="search"></span>
+            <label class="menu__search-label menu__item-link menu__item-link--padding" for="search"><img class="menu__item-img menu__item-img--position" src="img/icon-search.svg"><span class="menu__item-text--hidden">Поиск по сайту</label>
+          </form>
+        </li>
+        <li class="menu__item menu__item--cart-link">
+          <a href="#" class="menu__item-link">
+            <img class="menu__item-img" src="img/icon-cart.svg">Корзина: пока пуста
+          </a>
+        </li>
+      </ul>
+      <ul class="header__menu header__menu--sales header__menu--hidden">
+        <li class="menu__item">
+          <a class="menu__item-link" href="#">Новые поступления</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item-link">Распродажа</a>
+        </li>
+      </ul>
+      <div class="menu__intro  menu__intro-mobile-hidden">
+        <p class="menu__intro-text">Бесплатная доставка по России</p>
+      </div>
     </header>
     <main class="main">
       <div class="intro">
         <div class="intro__wrapper">
-          <h1 class="intro__title">Милые штуки ручной
+          <h1 class="intro__title">Милые штуки ручной <br class="intro__hidden">
           работы для дома</h1>
         </div>
       </div>
@@ -41,67 +68,82 @@
         <li class="catalog-list__item">
           <a href="#" class="catalog-list__link">
             <span class="catalog-list__text">Предметы интерьера</span>
-            <span class="catalog-list__icon">лампа</span>
+            <img class="catalog-list__icon--interior" src="../img/icon-interior.svg" width="40" height="62" alt="лампа">
           </a>
         </li>
         <li class="catalog-list__item catalog-list__item--dark">
           <a href="#" class="catalog-list__link">
             <span class="catalog-list__text">Детские игрушки</span>
-            <span class="catalog-list__icon">лего</span>
+            <img class="catalog-list__icon--toy" src="../img/icon-toy.svg" width="60" height="60" alt="лего">
           </a>
         </li>
       </ul>
-      <section class="bestseller">
-        <p class="bestseller__action">Вязаные корзинки</p>
-        <h2 class="bestseller__title">Товар недели</h2>
-        <p class="bestseller__label">Экологическая чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-        <table class="bestseller-table">
-          <tr class="bestseller-table__row"> <!-- ширину 260, флекс, бордер боттом -->
-            <th class="bestseller-table__data">Цвет</th> <!-- здесь задаю ширину 97пх по макету расстояние от первой колонки до второй, текст элигн старт...
-            я посчитал пиксели, первый столбик ровно 1/3 от ширины макета, то есть можно сделать через флекс шринк 1/3 - первый столбик, второй 2/3. не помню как он точно задается, это гляну потом.-->
-            <td class="bestseller-table__data">&laquo;Тифани/серый&raquo;</td> <!-- флекс шринк 2/3, текст элигн старт -->
-          </tr>
-          <tr class="bestseller-table__row">
-            <th class="bestseller-table__data">Диаметр</th>
-            <td class="bestseller-table__data">25 см</td>
-          </tr>
-          <tr class="bestseller-table__row">
-            <th class="bestseller-table__data">Высота</th>
-            <td class="bestseller-table__data">15 см</td>
-          </tr>
-        </table>
-        <div class="bestseller__img-wrapper"> <!-- этот блок будем вставлять еще не раз, поэтому это блок, а не элемент  -->
-          <img class="bestseller__img" src="">  <!-- здесь конечно сомнения по поводу имени-->
-          <p class="bestseller__price">Цена: 990 руб.</p> <!-- цена же отдельный блок , и она наверняка везде одинаково выглядит -->
-        </div>
-        <a class="bestseller__btn btn" type="button">Заказать</a>
-      </section>
+      <div class="bestseller__wrap">
+        <section class="bestseller">
+          <div class="bestseller__header">
+            <p class="bestseller__good">Вязаные корзинки</p>
+            <h2 class="bestseller__title">Товар недели</h2>
+          </div>
+          <div class="bestseller__inner">
+            <div class="bestseller__wrap-bestseller">
+              <div class="bestseller__wrap-description">
+                <p class="bestseller__label">Экологическая чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+                <table class="bestseller-table">
+                  <tr class="bestseller-table__row"> <!-- ширину 260, флекс, бордер боттом -->
+                    <th class="bestseller-table__data">Цвет</th> <!-- здесь задаю ширину 97пх по макету расстояние от первой колонки до второй, текст элигн старт...
+                    я посчитал пиксели, первый столбик ровно 1/3 от ширины макета, то есть можно сделать через флекс шринк 1/3 - первый столбик, второй 2/3. не помню как он точно задается, это гляну потом.-->
+                    <td class="bestseller-table__data">&laquo;Тифани/серый&raquo;</td> <!-- флекс шринк 2/3, текст элигн старт -->
+                  </tr>
+                  <tr class="bestseller-table__row">
+                    <th class="bestseller-table__data">Диаметр</th>
+                    <td class="bestseller-table__data">25 см</td>
+                  </tr>
+                  <tr class="bestseller-table__row">
+                    <th class="bestseller-table__data">Высота</th>
+                    <td class="bestseller-table__data">15 см</td>
+                  </tr>
+                </table>
+                <div class="bestseller__wrap-btn">
+                <p class="bestseller__price">Цена: 990 руб.</p> <!-- цена же отдельный блок , и она наверняка везде одинаково выглядит -->
+                <a class="bestseller__btn btn" type="button">Заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="bestseller__img-wrap">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@1x.jpg 2x">
+                <img class="bestseller__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Бестселлер">
+              </picture>
+            </div>
+          </div>
+        </section>
+      </div>
       <section class="about-us">
         <div class="about-us__wrapper">
           <h2 class="about-us__title">Коротко о нас:</h2>
           <ul class="about-us__advantages advantages-list">
-            <li class="advantages-list__item advantage">
-              <img class="advantage__icon" src="#" alt="цветочек">
+            <li class="advantages-list__item advantage-1">
+              <img class="advantage__icon" src="img/icon-feature-flower.svg" alt="цветочек">
               <span class="advantage__text">Экологически чистые материалы</span>
             </li>
-            <li class="advantages-list__item advantage">
-              <img class="advantage__icon" src="#" alt="денежная купюра">
+            <li class="advantages-list__item advantage-2">
+              <img class="advantage__icon" src="img/icon-feature-money.svg" alt="денежная купюра">
               <span class="advantage__text">Скандинавский стиль по российской цене</span>
             </li>
-            <li class="advantages-list__item advantage">
-              <img class="advantage__icon" src="#" alt="лайк">
+            <li class="advantages-list__item advantage-3">
+              <img class="advantage__icon" src="img/icon-feature-heart.svg" alt="лайк">
               <span class="advantage__text">Увеличивает лайки на фотографиях</span>
             </li>
-            <li class="advantages-list__item advantage">
-              <img class="advantage__icon" src="#" alt="клубок">
+            <li class="advantages-list__item advantage-4">
+              <img class="advantage__icon" src="img/icon-feature-ball.svg" alt="клубок">
               <span class="advantage__text">Связано вручную с любовью и умилением</span>
             </li>
-            <li class="advantages-list__item advantage">
-              <img class="advantage__icon" src="#" alt="ракета">
-              <span class="advantage__text">Поддержка отечественного производителя</span>
+            <li class="advantages-list__item advantage-5">
+              <img class="advantage__icon" src="img/icon-feature-rocket.svg" alt="ракета">
+              <span class="advantage__text">Поддержка&nbsp;отечественного производителя</span>
             </li>
-            <li class="advantages-list__item advantage">
-              <img class="advantage__icon" src="#" alt="поадрочная упаковка">
+            <li class="advantages-list__item advantage-6">
+              <img class="advantage__icon" src="img/icon-feature-gift.svg" alt="подарочная упаковка">
               <span class="advantage__text">Поставляется в подарочной упаковке</span>
             </li>
           </ul>
@@ -110,46 +152,65 @@
       <section class="reviews">
         <div class="reviews__wrapper slider">
           <h2 class="reviews__title">Отзывы</h2>
+          <a class="reviews__write btn" href="#">Написать</a>
           <div class="reviews__list  slider__list">
             <blockquote class="reviews__item  slider__item">
               <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
               <p class="reviews__author-name">Анастасия Красильникова</p>
               <a href="https://www.instagram.com/misssssiskras/?hl=ru" class="reviews__author-link">@misssssiskras</a>
             </blockquote>
-            <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-            <button class="reviews__next" type="button">Следующий отзыв</button>
-            <a class="reviews__write btn" href="#">Написать</a>
+            <div class="reviews__wrap-btn">
+              <button class="reviews__prev" type="button">Предыдущий отзыв</button>
+              <button class="reviews__next" type="button">Следующий отзыв</button>
+            </div>
           </div>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__contacts contacts">
-        <b class="contacts__title">Контакты</b>
-        <table class="contacts-table">
-          <tr class="contacts-table__row">
-            <th class="contacts-table__text">e-mail</th>
-            <td class="contacts-table__text">
-              <a href="mailto:info@mimimishkashop.ru" class="contacts-table__link">info@mimimishkashop.ru</a>
-            </td>
-          </tr>
-          <tr class="contacts-table__row">
-            <th class="contacts-table__text">адрес:</th>
-            <td class="contacts-table__text">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
-          </tr>
-        </table>
+      <div class="footer__wrap--desktop">
+        <div class="footer__wrap-contacts">
+          <div class="footer__contacts contacts">
+            <b class="contacts__title">Контакты</b>
+            <img class="contacts__img" src="img/icon-flag.svg" width="47" height="81">
+            <table class="contacts-table">
+              <tr class="contacts-table__row contacts-table__row-1">
+                <th class="contacts-table__text-header">e&#8209;mail:</th>
+                <td class="contacts-table__text">
+                  <a class="contacts-table__text-link" href="mailto:info@mimimishkashop.ru" class="contacts-table__link">info@mimimishkashop.ru</a>
+                </td>
+              </tr>
+              <tr class="contacts-table__row">
+                <th class="contacts-table__text-header">адрес:</th>
+                <td class="contacts-table__text">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</td>
+              </tr>
+            </table>
+          </div>
+          <button class="footer__btn btn" type="button">Напишите нам</button>
+        </div>
+        <section class="footer__map">
+          <p class="footer__map-img">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003151!2d30.32085871621117!3d59.9387191690541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTkxMTg2!5e0!3m2!1sru!2sid!4v1540826273091" width="320" height="457" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </p>
+        </section>
       </div>
-      <section class="footer__map">
-      </section>
-      <button class="footer__btn btn" type="button">Напишите нам</button>
-      <div class="footer__social-block">
-        <a class="social-link social-link--instagramm" href="#">instagramm</a>
-        <a class="social-link social-link--facebook" href="#">facebook</a>
-        <a class="social-link social-link--twitter" href="#">twitter</a>
-      </div>
-      <div class="footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <div class="footer__wrap footer__wrap--background">
+        <div class="footer__social-block">
+          <div class="footer__logo-wrap footer__hidden">
+            <img class="footer__logo" src="../img/logo-footer.svg" alt="лого футера" width="102" height="34">
+          </div>
+          <div class="footer__social-wrap">
+            <a class="social-link social-link--instagramm" href="#"><span class="visually-hidden">instagramm</span></a>
+            <a class="social-link social-link--facebook" href="#"><span class="visually-hidden">facebook</span></a>
+            <a class="social-link social-link--twitter" href="#"><span class="visually-hidden">twitter</span></a>
+          </div>
+          <div class="footer__copyright copyright">
+            <div class="footer__copyright-wrap">
+              <b class="footer__copyright-text">Разработано:</b>
+              <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   </body>

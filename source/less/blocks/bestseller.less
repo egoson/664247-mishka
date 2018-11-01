@@ -11,7 +11,6 @@
   font-weight: 700;
   line-height: 30px;
   margin: 0;
-
 }
 
 .bestseller__title {
@@ -38,8 +37,6 @@
 
 .bestseller__btn {
   display: block;
-  text-align: center;
-  margin-top: 29px;
   color: #444444;
   margin-top: 20px;
   font-weight: 700;
@@ -48,7 +45,7 @@
   text-transform: uppercase;
   text-align: center;
   padding: 19px 60px 20px 61px;
-  border:2px solid #444444;
+  border: 2px solid #444444;
   background-color: #ffffff;
 }
 
@@ -63,26 +60,26 @@
   text-align: center;
 }
 
-
 .bestseller__wrap-btn {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   margin: 0 auto;
 }
 
 .bestseller__wrap {
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      width: 320px;
-      height: 23px;
-      background-image: url("../img/bg-zigzag-line.svg");
-      bottom: -60px;
-      background-size: 110%;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 23px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    bottom: -60px;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 @media (min-width: 768px) {
@@ -101,7 +98,6 @@
   .bestseller__btn {
     display: block;
     margin: auto;
-    line-height: 16px;
     color: #444444;
     margin-top: 20px;
     font-weight: 700;
@@ -110,7 +106,7 @@
     text-transform: uppercase;
     text-align: center;
     padding: 20px 101px 20px 101px;
-    border:2px solid #444444;
+    border: 2px solid #444444;
     background-color: #ffffff;
   }
 
@@ -155,10 +151,6 @@
   .bestseller__inner {
     display: flex;
   }
-
-  .bestseller__title {
-    margin-left: auto;
-  }
 }
 
 @media (min-width: 1150px) {
@@ -170,7 +162,7 @@
 
   .bestseller__wrap-bestseller {
     width: 525px;
-    padding-top: 50px
+    padding-top: 50px;
   }
 
   .bestseller__inner {
@@ -183,7 +175,6 @@
   }
 
   .bestseller__wrap-description {
-    margin-right: 0;
     width: 290px;
     margin-left: auto;
     margin-right: 58px;
@@ -195,7 +186,7 @@
   }
 
   .bestseller__good {
-    order: 1
+    order: 1;
   }
 
   .bestseller__title {
@@ -203,4 +194,3 @@
     margin-right: 58px;
   }
 }
-

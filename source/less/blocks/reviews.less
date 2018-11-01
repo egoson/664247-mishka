@@ -1,23 +1,24 @@
 .reviews {
   position: relative;
   padding-bottom: 85px;
-  &::after {
-      content: "";
-      position: absolute;
-      width: 320px;
-      height: 23px;
-      background-image: url("../img/bg-zigzag-line.svg");
-      bottom: 0px;
-      background-size: 110%;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
 
+  &::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 23px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    bottom: 0;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .reviews__wrapper {
   width: 260px;
   position: relative;
+  margin: auto;
 }
 
 .reviews__title {
@@ -78,18 +79,12 @@
   margin-top: 20px;
   font-weight: 700;
   font-size: 17px;
-  line-height: 16px;
   box-sizing: border-box;
   text-transform: uppercase;
   text-align: center;
   padding: 19px 60px 20px 61px;
-  border:2px solid #444444;
+  border: 2px solid #444444;
   background-color: #ffffff;
-}
-
-.reviews__wrapper {
-  width: 260px;
-  margin: auto;
 }
 
 .reviews__item {

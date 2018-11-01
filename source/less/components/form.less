@@ -20,6 +20,7 @@
   color: #63d1bb;
   position: relative;
   text-transform: uppercase;
+
   &::before {
     content: "";
     display: block;
@@ -27,7 +28,7 @@
     width: 198px;
     height: 1px;
     background-color: #63d1bb;
-    right: 0px;
+    right: 0;
     top: 10px;
   }
 }
@@ -40,6 +41,7 @@
   line-height: 18px;
   margin-bottom: 20px;
   padding-left: 66px;
+
   &::after {
     content: "";
     position: absolute;
@@ -50,6 +52,7 @@
     left: 0;
     top: -12px;
   }
+
   &::before {
     content: none;
     position: absolute;
@@ -61,6 +64,7 @@
     top: 2px;
   }
 }
+
 .form__radio:checked + .form__radio-label::before {
   content: "";
 }
@@ -77,6 +81,7 @@
   line-height: 18px;
   padding-left: 66px;
   margin-bottom: 46px;
+
   &::before {
     content: "";
     position: absolute;
@@ -86,6 +91,7 @@
     left: 0;
     top: -12px;
   }
+
   &::after {
     content: none;
     position: absolute;
@@ -104,29 +110,33 @@
 }
 
 ::-webkit-input-placeholder {
-  color:#cacaca;
+  color: #cacaca;
   font-size: 17px;
   font-weight: 400;
   line-height: 18px;
 }
+
 ::-moz-placeholder {
-  color:#cacaca;
+  color: #cacaca;
   font-size: 17px;
   font-weight: 400;
   line-height: 18px;
 }
+
 :-moz-placeholder {
-  color:#cacaca;
+  color: #cacaca;
   font-size: 17px;
   font-weight: 400;
   line-height: 18px;
 }
+
 :-ms-input-placeholder {
-  color:#cacaca;
+  color: #cacaca;
   font-size: 17px;
   font-weight: 400;
   line-height: 18px;
 }
+
 .form__field-headline {
   font-size: 17px;
   font-weight: 700;
@@ -153,15 +163,16 @@
   position: relative;
   color: #63d1bb;
   width: 260px;
+
   &::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 188px;
-  height: 1px;
-  background-color: #63d1bb;
-  left: 72px;
-  top: 10px;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 188px;
+    height: 1px;
+    background-color: #63d1bb;
+    left: 72px;
+    top: 10px;
   }
 }
 
@@ -176,11 +187,10 @@
   width: 240px;
   font-size: 17px;
   font-weight: 400;
-  letter-spacing: 18px;
   color: #444444;
   letter-spacing: 0.7px;
   padding: 10px;
-  border:2px solid #444444;
+  border: 2px solid #444444;
   padding-bottom: 100px;
   resize: none;
   overflow: auto;
@@ -195,11 +205,10 @@
   margin-top: 20px;
   font-weight: 700;
   font-size: 17px;
-  line-height: 16px;
   text-transform: uppercase;
   text-align: center;
   padding: 15px 26px 16px 26px;
-  border:2px solid #444444;
+  border: 2px solid #444444;
   background-color: #ffffff;
 }
 
@@ -255,7 +264,7 @@
 
   .form__field--phone {
     width: 350px;
-    background-color: #f1f1f1
+    background-color: #f1f1f1;
   }
 
   .form__field--email {
@@ -299,6 +308,7 @@
   .form__section-title {
     margin: 0;
     width: 167px;
+
     &::before {
       content: none;
     }
@@ -319,7 +329,7 @@
     width: 400px;
     font-size: 19px;
     line-height: 18px;
-    margin-bottom: 50px
+    margin-bottom: 50px;
   }
 
   .form__checkbox-label {
@@ -333,22 +343,22 @@
 
   .form__field--phone ::-webkit-input-placeholder {
     font-size: 19px;
-    background-color: #f1f1f1
+    background-color: #f1f1f1;
   }
 
   .form__field--phone ::-moz-placeholder {
     font-size: 19px;
-    background-color: #f1f1f1
+    background-color: #f1f1f1;
   }
 
   .form__field--phone :-moz-placeholder {
     font-size: 19px;
-    background-color: #f1f1f1
+    background-color: #f1f1f1;
   }
 
   .form__field--phone :-ms-input-placeholder {
     font-size: 19px;
-    background-color: #f1f1f1
+    background-color: #f1f1f1;
   }
 
   ::-webkit-input-placeholder {
@@ -378,6 +388,8 @@
     align-self: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    font-size: 17px;
+    line-height: 30px;
   }
 
   .form__btn {
@@ -385,12 +397,6 @@
     margin-left: 0;
     width: 230px;
   }
-
-  .form__warning {
-    font-size: 17px;
-    line-height: 30px;
-  }
-
 }
 
 @media (min-width: 1050px) {
@@ -404,7 +410,7 @@
   }
 
   .form__wrap {
-    width: 875px
+    width: 875px;
   }
 
   .form__checkbox-wrap {

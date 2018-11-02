@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <header class="header menu">
+    <header class="header menu main-nav main-nav--closed main-nav--nojs">
       <div class="logo__wrapper">
         <a href="index.html" class="header__logo logo">
           <picture>
@@ -17,12 +17,9 @@
             <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
           </picture>
         </a>
-        <button class="logo__close" type="button">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="21px" height="20px" viewBox="0 0 20.514 20.512" enable-background="new 0 0 20.514 20.512" xml:space="preserve">
-            <polygon fill="#231F20" points="20.513,1.414 19.099,0 10.256,8.842 1.414,0 0,1.414 8.842,10.256 0,19.098 1.414,20.512 10.256,11.67 19.099,20.512 20.513,19.098 11.671,10.256 "/>
-          </svg>
+        <button class="main-nav__toggle main-nav--opened" type="button">
+          <span class="visually-hidden">Открыть меню</span>
         </button>
-        <button class="burger" type="button"></button>
       </div>
       <ul class="header__menu header__menu--links">
         <li class="menu__item menu__item--catalog">
@@ -112,7 +109,7 @@
             <div class="bestseller__img-wrap">
               <picture>
                 <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@1x.jpg 2x">
-                <img class="bestseller__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Бестселлер">
+                <img class="bestseller__img" width="260" height="315" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@1x.jpg 2x" alt="Бестселлер">
               </picture>
             </div>
           </div>
@@ -124,27 +121,27 @@
           <ul class="about-us__advantages advantages-list">
             <li class="advantages-list__item advantage-1">
               <img class="advantage__icon" src="img/icon-feature-flower.svg" alt="цветочек">
-              <span class="advantage__text">Экологически чистые материалы</span>
+              <span class="advantage__text">Экологически<br class="about-us--mobile"> чистые материалы</span>
             </li>
             <li class="advantages-list__item advantage-2">
-              <img class="advantage__icon" src="img/icon-feature-money.svg" alt="денежная купюра">
-              <span class="advantage__text">Скандинавский стиль по российской цене</span>
+              <img class="advantage__icon advantage__icon--money" src="img/icon-feature-money.svg" alt="денежная купюра">
+              <span class="advantage__text">Скандинавский стиль<br class="about-us--mobile"> по российской цене</span>
             </li>
             <li class="advantages-list__item advantage-3">
               <img class="advantage__icon" src="img/icon-feature-heart.svg" alt="лайк">
-              <span class="advantage__text">Увеличивает лайки на фотографиях</span>
+              <span class="advantage__text">Увеличивает лайки<br class="about-us--mobile"> на фотографиях</span>
             </li>
             <li class="advantages-list__item advantage-4">
-              <img class="advantage__icon" src="img/icon-feature-ball.svg" alt="клубок">
-              <span class="advantage__text">Связано вручную с любовью и умилением</span>
+              <img class="advantage__icon advantage__icon--ball" src="img/icon-feature-ball.svg" alt="клубок">
+              <span class="advantage__text">Связано вручную с<br class="about-us--mobile"> любовью и умилением</span>
             </li>
             <li class="advantages-list__item advantage-5">
-              <img class="advantage__icon" src="img/icon-feature-rocket.svg" alt="ракета">
+              <img class="advantage__icon advantage__icon--rocket" src="img/icon-feature-rocket.svg" alt="ракета">
               <span class="advantage__text">Поддержка&nbsp;отечественного производителя</span>
             </li>
             <li class="advantages-list__item advantage-6">
-              <img class="advantage__icon" src="img/icon-feature-gift.svg" alt="подарочная упаковка">
-              <span class="advantage__text">Поставляется в подарочной упаковке</span>
+              <img class="advantage__icon advantage__icon--present" src="img/icon-feature-gift.svg" alt="подарочная упаковка">
+              <span class="advantage__text">Поставляется в<br class="about-us--mobile"> подарочной упаковке</span>
             </li>
           </ul>
         </div>
@@ -160,8 +157,8 @@
               <a href="https://www.instagram.com/misssssiskras/?hl=ru" class="reviews__author-link">@misssssiskras</a>
             </blockquote>
             <div class="reviews__wrap-btn">
-              <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-              <button class="reviews__next" type="button">Следующий отзыв</button>
+              <button class="reviews__prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
+              <button class="reviews__next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
             </div>
           </div>
         </div>
@@ -213,20 +210,37 @@
         </div>
       </div>
     </footer>
+    <section class="modal">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <p class="modal__text">Выберете размер:</p>
+      </div>
+      <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
+        <input class="modal-form__radio" type="radio" name="size" id="size-s" value="s" checked>
+        <label class="modal-form__radio-label" for="size-s">s</label>
+        <input class="modal-form__radio" type="radio" name="size" id="size-m" value="m">
+        <label class="modal-form__radio-label" for="size-m">m</label>
+        <input class="modal-form__radio" type="radio" name="size" id="size-l" value="l">
+        <label class="modal-form__radio-label" for="size-l">l</label>
+        <button class="modal__btn btn">Добавить</button>
+      </form>
+    </section>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+      } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+      }
+    });
+    </script>
   </body>
 </html>
-<section class="modal">
-  <div class="modal__wrapper">
-    <h2 class="modal__title">Добавить в корзину</h2>
-    <p class="modal__text">Выберете размер:</p>
-  </div>
-    <form class="modal-form" action="https://echo.htmlacademy.ru" method="get">
-      <input class="modal-form__radio" type="radio" name="size" id="size-s" value="s" checked>
-      <label class="modal-form__radio-label" for="size-s">s</label>
-      <input class="modal-form__radio" type="radio" name="size" id="size-m" value="m">
-      <label class="modal-form__radio-label" for="size-m">m</label>
-      <input class="modal-form__radio" type="radio" name="size" id="size-l" value="l">
-      <label class="modal-form__radio-label" for="size-l">l</label>
-      <button class="modal__btn btn">Добавить</button>
-    </form>
-</section>
+

@@ -1,6 +1,7 @@
 .reviews {
   position: relative;
-  padding-bottom: 85px;
+  padding-bottom: 110px;
+  margin-bottom: 27px;
 
   &::after {
     content: "";
@@ -8,7 +9,7 @@
     width: 320px;
     height: 23px;
     background-image: url("../img/bg-zigzag-line.svg");
-    bottom: 0;
+    bottom: 0px;
     background-size: 110%;
     background-repeat: no-repeat;
     background-position: center;
@@ -25,6 +26,7 @@
   font-size: 25px;
   font-weight: 700;
   line-height: 30px;
+  margin-bottom: 22px;
 }
 
 .reviews__text {
@@ -32,12 +34,14 @@
   font-weight: 400;
   line-height: 30px;
   color: #444444;
+  margin-bottom: 28px;
 }
 
 .reviews__author-name {
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
+  margin-bottom: 2px;
 }
 
 .reviews__author-link {
@@ -57,20 +61,31 @@
   display: block;
   width: 130px;
   height: 52px;
-  background-image: url("img/icon-left-arrow.svg");
+  background-color: transparent;
+  border: none;
+  background-image: url("../img/icon-left-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #ececec;
 }
 
 .reviews__next {
   display: block;
   width: 130px;
   height: 52px;
-  background-image: url("img/icon-right-arrow.svg");
+  background-color: transparent;
+  border: none;
+  background-image: url("../img/icon-right-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #ececec;
+  border-left: none;
 }
 
 .reviews__write {
   position: absolute;
   text-decoration: none;
-  bottom: -80px;
+  bottom: -90px;
   left: 50%;
   width: 260px;
   transform: translateX(-50%);
@@ -78,18 +93,18 @@
   color: #444444;
   margin-top: 20px;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 18px;
   box-sizing: border-box;
   text-transform: uppercase;
   text-align: center;
-  padding: 19px 60px 20px 61px;
+  padding: 15px 60px 17px 61px;
   border: 2px solid #444444;
   background-color: #ffffff;
 }
 
 .reviews__item {
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 768px) {

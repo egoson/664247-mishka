@@ -85,6 +85,7 @@
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 52px;
+    margin-bottom: 60px;
   }
 
   .bestseller__good {
@@ -96,13 +97,13 @@
     display: block;
     margin: auto;
     color: #444444;
-    margin-top: 20px;
+    margin-top: 34px;
     font-weight: 700;
     font-size: 17px;
     line-height: 16px;
     text-transform: uppercase;
     text-align: center;
-    padding: 20px 101px 20px 101px;
+    padding: 15px 85px 18px 81px;
     border: 2px solid #444444;
     background-color: #ffffff;
   }
@@ -116,6 +117,21 @@
     margin-right: 28px;
   }
 
+  .bestseller__wrap {
+    &:after {
+      background-size: 100%;
+      width: 100%;
+      bottom: -12px;
+    }
+  }
+
+  .bestseller__label {
+    margin-top: 0;
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 42px;
+  }
+
   .bestseller__wrap-bestseller {
     display: flex;
   }
@@ -126,7 +142,8 @@
   }
 
   .bestseller__price {
-    margin-top: 60px;
+    font-size: 20px;
+    margin-top: 46px;
     width: 290px;
   }
 
@@ -139,10 +156,13 @@
   .bestseller__img {
     width: 334px;
     height: auto;
+    margin-top: 8px
   }
 
   .bestseller__header {
     display: flex;
+    width: 668px;
+    margin-bottom: 49px;
   }
 
   .bestseller__inner {
@@ -157,9 +177,13 @@
     flex-direction: column;
   }
 
+  .bestseller__wrap {
+    margin-bottom: 102px;
+  }
+
   .bestseller__wrap-bestseller {
     width: 525px;
-    padding-top: 50px;
+    padding-top: 52px;
   }
 
   .bestseller__inner {
@@ -169,6 +193,7 @@
 
   .bestseller__img {
     width: 525px;
+    margin-top: -105px;
   }
 
   .bestseller__wrap-description {
@@ -180,14 +205,39 @@
   .bestseller__header {
     position: relative;
     display: flex;
+    width: 800px;
+    margin-left: -2px;
   }
 
   .bestseller__good {
     order: 1;
+    font-size: 53px;
   }
 
   .bestseller__title {
     margin-left: 47px;
     margin-right: 58px;
   }
+
+  .bestseller__wrap-description {
+    width: 292px;
+  }
+
+  .bestseller__label {
+    margin-bottom: 53px;
+  }
+
+  .bestseller__price {
+    margin-top: 101px
+  }
+
+  .bestseller__wrap {
+    &::after {
+      bottom: -38px;
+      background-size: 67%;
+      background-repeat: repeat;
+      height: 18px;
+    }
+  }
+
 }

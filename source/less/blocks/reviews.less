@@ -37,6 +37,10 @@
   margin-bottom: 28px;
 }
 
+.reviews__text--br {
+  display: none;
+}
+
 .reviews__author-name {
   font-size: 17px;
   font-weight: 700;
@@ -109,9 +113,21 @@
 
 @media (min-width: 768px) {
   .reviews {
-    background-image: url("../img/review@1x.jpg");
-    background-repeat: no-repeat;
-    background-position-x: 45px;
+    margin-bottom: 52px;
+
+    &::after {
+      width: 100%;
+      bottom: 7px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 350px;
+      height: 457px;
+      background-image: url("../img/review@1x.jpg");
+      top: -40px;
+    }
   }
 
   .reviews__wrapper {
@@ -124,10 +140,16 @@
   .reviews__title {
     font-size: 43px;
     line-height: 50px;
+    margin-bottom: 31px;
+  }
+
+  .reviews__author-name {
+    font-size: 18px;
   }
 
   .reviews__text {
     font-size: 17px;
+    margin-bottom: 60px;
   }
 
   .reviews__write {
@@ -138,6 +160,9 @@
     left: auto;
     bottom: auto;
     transform: none;
+    padding: 16px 35px 16px 35px;
+    width: auto;
+    margin-top: 13px;
   }
 
   .reviews__wrap-btn {
@@ -145,4 +170,70 @@
     right: 0;
     bottom: 0;
   }
+
+  .reviews__prev {
+    width: 89px;
+    border: none;
+  }
+
+  .reviews__next {
+    width: 89px;
+    border: none;
+  }
+
+  .reviews__wrap-btn {
+    bottom: -5px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .reviews {
+    width: 100%;
+    margin-bottom: 191px;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      background-size: 56%;
+      background-repeat: repeat-x;
+      bottom: -47px;
+    }
+  }
+
+  .reviews__title {
+    font-size: 53px;
+    margin-bottom: 34px
+  }
+
+  .reviews__write {
+    margin-top: 20px;
+  }
+
+  .reviews__text {
+    margin-bottom: 40px;
+  }
+
+  .reviews__text--br {
+    display: inline;
+  }
+
+  .reviews__wrapper {
+    position: relative;
+    width: 875px;
+    margin-left: 31.57%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 350px;
+      height: 457px;
+      background-image: url("../img/review@1x.jpg");
+      top: -30px;
+      left: -175px;
+      z-index: -1
+    }
+  }
+
 }

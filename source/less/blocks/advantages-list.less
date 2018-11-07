@@ -6,6 +6,10 @@
   flex-direction: column;
 }
 
+.advantages-list__wrap-img {
+  min-height: 55px;
+}
+
 .advantages-list__item {
   display: flex;
   flex-direction: column;
@@ -21,7 +25,17 @@
 .advantage__icon--money {
   position: relative;
   left: -9px;
-  margin-bottom: 27px;
+  top: 5px;
+}
+
+.advantage__icon--flower {
+  top: 5px;
+  position: relative;
+}
+
+.advantage__icon--heart {
+  position: relative;
+  top: 10px;
 }
 
 .advantage__icon--ball {
@@ -32,25 +46,14 @@
 
 .advantage__icon--rocket {
   position: relative;
-  top: -7px;
+  top: 7px;
   left: -13px;
 }
 
 .advantage__icon--present {
   position: relative;
   left: -5px;
-}
-
-.advantage-2 {
-  margin-bottom: 35px;
-}
-
-.advantage-4 {
-  margin-bottom: 41px;
-}
-
-.advantage-5 {
-  margin-bottom: 31px;
+  top: 5px;
 }
 
 @media (min-width: 768px) {
@@ -59,38 +62,76 @@
     flex-wrap: wrap;
   }
 
+  .advantage-list__text {
+    font-size: 20px;
+  }
+
   .advantages-list__item {
     width: 248px;
-    margin-right: 136px;
+    margin-right: 0px;
+    margin-bottom: 60px;
   }
 
   .advantage-1 {
     order: 1;
-    width: 200px;
+    width: 220px;
+    margin-bottom: 0px;
   }
 
   .advantage-2 {
     order: 3;
-    width: 200px;
+    width: 240px;
   }
 
   .advantage-3 {
     order: 5;
-    width: 200px;
+    width: 250px;
   }
 
   .advantage-4 {
     order: 2;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: 88px;
   }
 
   .advantage-5 {
     order: 4;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: 88px;
   }
 
   .advantage-6 {
     order: 6;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: 88px;
+  }
+
+  .advantages-list__wrap-img {
+    min-height: 55px;
+  }
+
+  .advantage__icon {
+    margin-bottom: 13px;
+  }
+
+  .advantage__icon--rocket {
+    top: 5px;
+  }
+
+  .advantage__icon--heart {
+    position: relative;
+    top: 5px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .catalog-list__link {
+    width: 525px;
+    padding-left: 37px;
+  }
+
+  .advantages-list__item {
+    width: 262px;
+    margin-bottom: 60px;
   }
 }

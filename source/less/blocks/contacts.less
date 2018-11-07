@@ -46,6 +46,39 @@
   .contacts__title {
     font-size: 43px;
     line-height: 50px;
+    margin-left: -4px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 52px;
+      top: -15px;
+      width: 47px;
+      height: 81px;
+      background-image: url("../img/icon-flag.svg");
+    }
+  }
+
+  .contacts-table {
+    margin-top: 48px;
+    width: 668px;
+  }
+
+  .contacts-table tbody {
+    flex-direction: row;
+  }
+
+  .contacts-table__text-header {
+    font-size: 17px;
+    margin-right: 24px;
+  }
+
+  .contacts-table__text-link {
+    font-size: 17px;
+  }
+
+  .contacts-table__text {
+    font-size: 17px;
   }
 
   .contacts {
@@ -68,6 +101,7 @@
 
   .contacts__title {
     order: 2;
+    font-size: 53px;
   }
 
   .contacts-table {
@@ -77,5 +111,15 @@
   .contacts {
     width: auto;
     padding-left: 175px;
+  }
+
+  .contacts__title {
+    position: relative;
+
+    &::before {
+      right: auto;
+      left: -109px;
+      top: -12px;
+    }
   }
 }

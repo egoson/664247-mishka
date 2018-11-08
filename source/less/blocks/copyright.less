@@ -6,9 +6,28 @@
 }
 
 .copyright__link {
-  display: block;
-  background-image: url("../img/logo-htmlacademy.svg");/*здесь как-то по другому надо вставлять свг, чтобы цвет менять*/
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  width: 190px;
+  height: 34px;
+  margin-left: auto;
+  text-decoration: none;
+
+  &:hover .copyright__link-img {
+    fill: #46c1ae;
+  }
+
+  &:active .copyright__link-img {
+    fill: #bee3dd;
+  }
+
+  &:active .copyright__text {
+    color: #a9a9a9;
+  }
+}
+
+.copyright__link-img {
+  fill: #63d1bb;
   width: 27px;
   height: 34px;
   margin-left: auto;

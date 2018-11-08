@@ -63,6 +63,19 @@
   align-items: center;
 }
 
+.menu__item-link--cart {
+  fill: #d3d2d2;
+  position: absolute;
+  left: 40px;
+}
+
+.menu__item-link--search {
+  fill: #d3d2d2;
+  position: absolute;
+  left: -55px;
+  top: 35px
+}
+
 .menu__item-link {
   position: relative;
   text-decoration: none;
@@ -83,6 +96,14 @@
 
   &:active {
     color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover svg {
+    fill: #63d1bb;
+  }
+
+  &:active svg {
+    fill: #d6f3ed;
   }
 }
 

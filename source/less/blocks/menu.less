@@ -23,7 +23,6 @@
 }
 
 .main-nav--opened .main-nav__toggle {
-
   &::before,
   &::after {
     content: "";
@@ -44,14 +43,17 @@
     transform: rotate(-45deg);
   }
 }
+
 @media (max-width: 767px) {
   .main-nav--closed .header__menu {
     display: none;
   }
 }
+
 .main-nav--nojs .main-nav__toggle {
-    display: none;
-  }
+  display: none;
+}
+
 .menu {
   font-size: 17px;
   font-weight: 700;
@@ -73,7 +75,7 @@
   fill: #d3d2d2;
   position: absolute;
   left: -55px;
-  top: 35px
+  top: 35px;
 }
 
 .menu__item-link {
@@ -134,6 +136,7 @@
   .main-nav__toggle {
     display: none;
   }
+
   .menu {
     width: 668px;
     flex-direction: row;
@@ -251,6 +254,6 @@
   }
 
   .menu__intro-text {
-    margin-top: 0px;
+    margin-top: 0;
   }
 }

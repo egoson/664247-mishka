@@ -66,7 +66,6 @@
   width: 130px;
   height: 52px;
   background-color: transparent;
-  border: none;
   background-image: url("../img/icon-left-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -78,7 +77,6 @@
   width: 130px;
   height: 52px;
   background-color: transparent;
-  border: none;
   background-image: url("../img/icon-right-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -120,6 +118,13 @@
       bottom: 7px;
       height: 17px;
     }
+  }
+
+  .reviews__wrapper {
+    width: 668px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
 
     &::before {
       content: "";
@@ -128,18 +133,13 @@
       height: 457px;
       background-image: url("../img/review@1x.jpg");
       top: -40px;
-
-      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-        background-image: url("../img/review@2x.jpg");
-      }
+      left: -50px;
+      z-index: -1;
     }
-  }
 
-  .reviews__wrapper {
-    width: 668px;
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .reviews__title {
@@ -175,14 +175,14 @@
     }
 
     &:active {
-      color: #b2b2b2
+      color: #b2b2b2;
     }
   }
 
   .reviews__wrap-btn {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -5px;
   }
 
   .reviews__prev {
@@ -190,11 +190,11 @@
     border: none;
 
     &:hover {
-      opacity: 0.6
+      opacity: 0.6;
     }
 
     &:active {
-      opacity: 0.3
+      opacity: 0.3;
     }
   }
 
@@ -203,16 +203,12 @@
     border: none;
 
     &:hover {
-      opacity: 0.6
+      opacity: 0.6;
     }
 
     &:active {
-      opacity: 0.3
+      opacity: 0.3;
     }
-  }
-
-  .reviews__wrap-btn {
-    bottom: -5px;
   }
 }
 
@@ -268,12 +264,15 @@
       background-image: url("../img/review@1x.jpg");
       top: -30px;
       left: 50px;
-      z-index: -1
+      z-index: -1;
+    }
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/review@2x.jpg");
     }
   }
 
   .reviews__wrap-btn {
     margin-right: 50px;
   }
-
 }

@@ -63,13 +63,13 @@
       </div>
       <ul class="catalog-list">
         <li class="catalog-list__item">
-          <a href="#" class="catalog-list__link">
+          <a href="catalog.html" class="catalog-list__link">
             <span class="catalog-list__text">Предметы интерьера</span>
             <img class="catalog-list__icon--interior" src="../img/icon-interior.svg" width="40" height="62" alt="лампа">
           </a>
         </li>
         <li class="catalog-list__item catalog-list__item--dark">
-          <a href="#" class="catalog-list__link">
+          <a href="catalog.html" class="catalog-list__link">
             <span class="catalog-list__text">Детские игрушки</span>
             <img class="catalog-list__icon--toy" src="../img/icon-toy.svg" width="60" height="60" alt="лего">
           </a>
@@ -102,7 +102,7 @@
                 </table>
                 <div class="bestseller__wrap-btn">
                 <p class="bestseller__price">Цена: 990 руб.</p> <!-- цена же отдельный блок , и она наверняка везде одинаково выглядит -->
-                <a class="bestseller__btn btn" type="button">Заказать</a>
+                <a class="bestseller__btn btn" href="#" type="button">Заказать</a>
                 </div>
               </div>
             </div>
@@ -161,7 +161,7 @@
       <section class="reviews">
         <div class="reviews__wrapper slider">
           <h2 class="reviews__title">Отзывы</h2>
-          <a class="reviews__write btn" href="#">Написать</a>
+          <a class="reviews__write btn" href="reviews.html">Написать</a>
           <div class="reviews__list  slider__list">
             <blockquote class="reviews__item  slider__item">
               <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, <br class="reviews__text--br">как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, <br class="reviews__text--br">и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
@@ -194,7 +194,7 @@
               </tr>
             </table>
           </div>
-          <button class="footer__btn btn" type="button">Напишите нам</button>
+          <a class="footer__btn btn" href="write.html">Напишите нам</a>
         </div>
         <section class="footer__map">
           <p class="footer__map-img">
@@ -204,9 +204,9 @@
       </div>
       <div class="footer__wrap footer__wrap--background">
         <div class="footer__social-block">
-          <div class="footer__logo-wrap footer__hidden">
+          <a href="index.html" class="footer__logo-wrap footer__hidden">
             <img class="footer__logo" src="../img/logo-footer.svg" alt="лого футера" width="102" height="34">
-          </div>
+          </a>
           <div class="footer__social-wrap">
             <a class="social-link social-link--instagramm" href="#"><span class="visually-hidden">instagramm</span></a>
             <a class="social-link social-link--facebook" href="#"><span class="visually-hidden">facebook</span></a>
@@ -214,33 +214,43 @@
           </div>
           <div class="footer__copyright copyright">
             <div class="footer__copyright-wrap">
-              <b class="footer__copyright-text">Разработано:</b>
-              <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+              <b class="copyright__text">Разработано:</b>
+              <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
             </div>
           </div>
         </div>
       </div>
     </footer>
-    <section class="modal">
-      <div class="modal__wrapper">
-        <h2 class="modal__title">Добавить в корзину</h2>
-        <p class="modal__text">Выберете размер:</p>
-      </div>
-      <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
-        <input class="modal__form-radio" type="radio" name="size" id="size-s" value="s" checked>
-        <label class="modal__form-radio-label" for="size-s">s</label>
-        <input class="modal__form-radio" type="radio" name="size" id="size-m" value="m">
-        <label class="modal__form-radio-label" for="size-m">m</label>
-        <input class="modal__form-radio" type="radio" name="size" id="size-l" value="l">
-        <label class="modal__form-radio-label" for="size-l">l</label>
-        <button class="modal__btn btn">Добавить</button>
-      </form>
-    </section>
+    <div class="modal__background modal--close">
+    </div>
+      <section class="modal modal--close">
+        <div class="modal__wrapper">
+          <h2 class="modal__title">Добавить в корзину</h2>
+          <p class="modal__text">Выберете размер:</p>
+        </div>
+        <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
+          <input class="modal__form-radio" type="radio" name="size" id="size-s" value="s" checked>
+          <label class="modal__form-radio-label" for="size-s">s</label>
+          <input class="modal__form-radio" type="radio" name="size" id="size-m" value="m">
+          <label class="modal__form-radio-label" for="size-m">m</label>
+          <input class="modal__form-radio" type="radio" name="size" id="size-l" value="l">
+          <label class="modal__form-radio-label" for="size-l">l</label>
+          <button class="modal__btn btn">Добавить</button>
+        </form>
+      </section>
+
     <script>
       var navMain = document.querySelector('.main-nav');
       var navToggle = document.querySelector('.main-nav__toggle');
+      var modal = document.querySelector('.modal');
+      var bestsellerBtn = document.querySelector('.bestseller__btn');
 
       navMain.classList.remove('main-nav--nojs');
+
+      bestsellerBtn.addEventListener('click', function() {
+        if (modal.classList.remove('modal--close'));
+      });
+
 
       navToggle.addEventListener('click', function() {
         if (navMain.classList.contains('main-nav--closed')) {

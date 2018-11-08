@@ -28,7 +28,7 @@
 @media (min-width: 768px) {
   .intro {
     position: relative;
-    min-height: 746px;
+    min-height: 706px;
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: center 0px;
     margin-top: -57px;
@@ -42,11 +42,13 @@
   .intro::after {
     content: "";
     position: absolute;
-    bottom: 35px;
+    bottom: -5px;
     width: 100%;
     height: 24px;
     background-image: url("../img/bg-zigzag-fill.svg");
-    background-size: 100%;
+    background-size: 768px auto;
+    background-repeat: repeat-x;
+    background-position: center top;
     z-index: 11;
   }
 
@@ -77,21 +79,18 @@
 
 @media (min-width: 1150px) {
   .intro {
-    background-image: url("../img/hero-desktop@2x.jpg");
+    background-image: url("../img/hero-desktop@1x.jpg");
     background-size: cover;
     background-size: 100%;
     background-position: center 0;
     margin-top: -75px;
     padding: 0;
+    min-height: 746px;
 
     &::after {
-      background-size: 67%;
-      bottom: -5px;
-
-    }
-
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-image: url("../img/hero-desktop@2x.jpg");
+      bottom: -15px;
+      height: 34px;
+      background-size: 1150px;
     }
   }
 

@@ -66,25 +66,25 @@
           <div class="catalog-item__wrap">
             <div class="catalog-item__wrap-text">
               <h2 class="catalog-item__title">
-                <a class="catalog-item__title-text" href="#">Зайчик попрыгайчик</a>
+                <a class="catalog-item__title-text" href="catalog-item-1.html">Зайчик попрыгайчик</a>
               </h2>
               <p class="catalog-item__text">Рост 30 см, вес 200 г</p>
             </div>
             <div class="catalog-item__price-row">
               <p class="catalog-item__price">1 200 руб.</p>
-              <a class="catalog-item__btn" href="#">
+              <a class="catalog-item__btn" href="catalog-item-1.html">
                 <img class="catalog-item__cart" src="img/icon-cart.svg" alt="корзинка">
               </a>
             </div>
           </div>
         </div>
         <div class="catalog-list-catalog__item catalog-item">
-          <a class="catalog-item__img" href="#">
+          <a class="catalog-item__img" href="catalog-item-.html">
             <img src="img/photo-bowl-mobile@1x.jpg" alt="корзинка для белья">
           </a>
           <div class="catalog-item__wrap">
             <h2 class="catalog-item__title">
-              <a class="catalog-item__title-text" href="#">Корзинка для белья</a>
+              <a class="catalog-item__title-text" href="catalog-item-.html">Корзинка для белья</a>
             </h2>
             <p class="catalog-item__text">Диаметр 15 см, высота 10 см</p>
             <div class="catalog-item__price-row">
@@ -96,12 +96,12 @@
           </div>
         </div>
         <div class="catalog-list-catalog__item catalog-item">
-          <a class="catalog-item__img" href="#">
+          <a class="catalog-item__img" href="catalog-item-.html">
             <img src="img/photo-toys-mobile@1x.jpg" alt="большая корзинка для игрушек">
           </a>
           <div class="catalog-item__wrap">
             <h2 class="catalog-item__title">
-              <a class="catalog-item__title-text" href="#">Большая корзинка<br class="catalog-item__br-tablet"> для игрушек</a>
+              <a class="catalog-item__title-text" href="catalog-item-.html">Большая корзинка<br class="catalog-item__br-tablet"> для игрушек</a>
             </h2>
             <p class="catalog-item__text catalog-item__text--margin">Диаметр 30 см, высота 30 см</p>
             <div class="catalog-item__price-row">
@@ -137,9 +137,9 @@
     <footer class="footer">
       <div class="footer__wrap footer__wrap--background">
         <div class="footer__social-block">
-          <div class="footer__logo-wrap footer__hidden">
+          <a href="index.html" class="footer__logo-wrap footer__hidden">
             <img class="footer__logo" src="../img/logo-footer.svg" alt="лого футера" width="102" height="34">
-          </div>
+          </a>
           <div class="footer__social-wrap">
             <a class="social-link social-link--instagramm" href="#"><span class="visually-hidden">instagramm</span></a>
             <a class="social-link social-link--facebook" href="#"><span class="visually-hidden">facebook</span></a>
@@ -147,8 +147,8 @@
           </div>
           <div class="footer__copyright copyright">
             <div class="footer__copyright-wrap">
-              <b class="footer__copyright-text">Разработано:</b>
-              <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+              <b class="copyright__text">Разработано:</b>
+              <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
             </div>
           </div>
         </div>
@@ -157,8 +157,15 @@
     <script>
       var navMain = document.querySelector('.main-nav');
       var navToggle = document.querySelector('.main-nav__toggle');
+      var modal = document.querySelector('.modal');
+      var bestsellerBtn = document.querySelector('.bestseller__btn');
 
       navMain.classList.remove('main-nav--nojs');
+
+      bestsellerBtn.addEventListener('click', function() {
+        if (modal.classList.remove('modal--close'));
+      });
+
 
       navToggle.addEventListener('click', function() {
         if (navMain.classList.contains('main-nav--closed')) {

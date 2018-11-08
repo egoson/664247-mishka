@@ -47,22 +47,6 @@
   background-color: #e5e5e5;
 }
 
-.footer__copyright-text {
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 18px;
-  color: #000000;
-}
-
-.footer__copyright-link {
-  display: block;
-  background-image: url("../img/logo-htmlacademy.svg");/*здесь как-то по другому надо вставлять свг, чтобы цвет менять*/
-  background-repeat: no-repeat;
-  width: 27px;
-  height: 34px;
-  margin-left: auto;
-}
-
 .footer__map {
   padding-bottom: 108px;
   width: 100%;
@@ -93,7 +77,8 @@
   font-size: 18px;
   text-transform: uppercase;
   text-align: center;
-  padding: 15px 33px 16px 32px;
+  padding: 15px 0px 16px 0px;
+  text-decoration: none;
   border: 2px solid #444444;
   background-color: #ffffff;
 }
@@ -122,6 +107,15 @@
     width: 230px;
     font-size: 17px;
     padding-top: 17px;
+
+    &:hover {
+      background-color: #444444;
+      color: #ffffff;
+    }
+
+    &:active {
+      color: #b2b2b2
+    }
   }
 
   .footer__social-block {

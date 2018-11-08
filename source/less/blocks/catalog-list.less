@@ -52,17 +52,44 @@
     display: flex;
     width: 668px;
     margin: auto;
-    margin-top: -167px;
+    margin-top: -127px;
     margin-bottom: 47px;
   }
 
   .catalog-list__link {
     padding-top: 26px;
     padding-bottom: 29px;
+
+
   }
 
   .catalog-list__item {
     width: 334px;
+
+    &:hover {
+      margin-top: -5px;
+      padding-bottom: 5px;
+    }
+
+    &:hover .catalog-list__text {
+      margin-top: -5px;
+    }
+
+    &:hover .catalog-list__icon--interior {
+      top: 0;
+    }
+
+    &:active .catalog-list__text {
+      opacity: 0.3
+    }
+
+    &:active .catalog-list__icon--interior {
+      opacity: 0.3
+    }
+
+    &:active .catalog-list__icon--toy {
+      opacity: 0.3
+    }
   }
 
   .catalog-list__text {

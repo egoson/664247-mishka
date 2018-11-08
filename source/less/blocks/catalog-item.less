@@ -79,6 +79,22 @@
   .catalog-item {
     display: flex;
     margin-bottom: 54px;
+
+    &:hover .catalog-item__wrap {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active .catalog-item__wrap {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:hover .catalog-item__title-text {
+      color: rgba(0, 0, 0, 0.6)
+    }
+
+    &:active .catalog-item__title-text {
+      color: rgba(0, 0, 0, 0.3)
+    }
   }
 
   .catalog-item__br-tablet {

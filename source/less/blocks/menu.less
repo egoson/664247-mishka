@@ -147,6 +147,7 @@
   .menu__item {
     margin-top: 0;
     border-bottom: none;
+    flex-shrink: 0;
   }
 
   .menu__item--catalog,
@@ -162,13 +163,15 @@
   }
 
   .menu__item-link--search {
-    left: -50px;
-    top: 5px;
+    position: static;
+    margin: auto;
   }
 
   .menu__item-link {
     padding: 0;
     text-align: right;
+    white-space: nowrap;
+    padding-right: 3px;
   }
 
   .menu__item-mobile-hidden {
@@ -213,11 +216,40 @@
     font-weight: 400;
     margin-left: auto;
   }
+
+  .menu__item--form {
+    margin-right: 0;
+    width: 88px;
+  }
+
+  .menu__search {
+    width: 100%;
+    margin: 0;
+  }
+
+  .menu__item-link--padding {
+    padding: 0;
+    border-left: 1px solid #ececec;
+    height: 88px;
+    border-right: 1px solid #ececec;
+    width: 100%;
+    display: flex;
+  }
 }
 
 @media (min-width: 1150px) {
   .menu {
     width: 1050px;
+  }
+
+  .menu__item--form {
+    margin-right: 0;
+    width: 80px;
+  }
+
+  .menu__search {
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
   }
 
   .menu__item-link {
@@ -226,6 +258,7 @@
     padding-bottom: 33px;
     text-align: left;
     font-size: 17px;
+    font-weight: 700;
   }
 
   .header__menu--sales .menu__item-link {
@@ -233,14 +266,13 @@
     padding-top: 18px;
   }
 
-  .menu__item-link--border {
-    border-right: 1px solid #ececec;
-    width: 186px;
+  .header__menu--sales .menu__item {
+    margin-right: 45px;
   }
 
   .menu__item {
     padding-left: 0;
-    margin-right: 45px;
+    margin-right: 0;
   }
 
   .menu__item-img {
@@ -253,10 +285,8 @@
 
   .menu__item--cart-link {
     margin-right: 0;
-  }
-
-  .menu__item--cart-link .menu__item-link {
-    padding-left: 83px;
+    margin-left: 88px;
+    text-align: right;
   }
 
   .menu__intro-text {
@@ -264,12 +294,25 @@
   }
 
   .menu__item-link--cart {
-    left: 30px;
+    left: -55px;
     top: 33px;
   }
 
   .menu__item-link--search {
-    left: -52px;
-    top: 37px;
+    position: static;
+    margin: auto;
+  }
+
+  .menu__item-link--padding {
+    padding: 0;
+    display: flex;
+    width: 100%;
+    height: 88px;
+  }
+
+  .menu__item--catalog {
+    border-right: 1px solid #ececec;
+    margin-right: 34px;
+    padding-right: 10px;
   }
 }

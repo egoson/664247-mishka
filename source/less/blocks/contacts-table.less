@@ -16,6 +16,16 @@
     display: flex;
     flex-direction: column;
   }
+
+  .contacts-table__text-link {
+    &:hover {
+      color: #46c1ae;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 @media (min-width: 1150px) {
@@ -25,5 +35,10 @@
 
   .contacts-table {
     width: auto;
+    margin-top: 52px;
+  }
+
+  .contacts-table tbody {
+    flex-direction: column;
   }
 }

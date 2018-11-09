@@ -32,8 +32,8 @@
 .footer__social-wrap {
   width: 140px;
   justify-content: space-between;
-  padding-top: 30px;
-  padding-bottom: 29px;
+  padding-top: 29px;
+  padding-bottom: 23px;
 }
 
 .footer__copyright-wrap::before {
@@ -47,24 +47,8 @@
   background-color: #e5e5e5;
 }
 
-.footer__copyright-text {
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 18px;
-  color: #000000;
-}
-
-.footer__copyright-link {
-  display: block;
-  background-image: url("../img/logo-htmlacademy.svg");/*здесь как-то по другому надо вставлять свг, чтобы цвет менять*/
-  background-repeat: no-repeat;
-  width: 27px;
-  height: 34px;
-  margin-left: auto;
-}
-
 .footer__map {
-  padding-bottom: 160px;
+  padding-bottom: 108px;
   width: 100%;
   text-align: center;
 }
@@ -82,17 +66,19 @@
   width: 260px;
   margin: 0 auto;
   position: absolute;
-  bottom: 220px;
+  bottom: 198px;
   left: 50%;
   transform: translateX(-50%);
   line-height: 16px;
   color: #444444;
+  letter-spacing: 0.4px;
   margin-top: 20px;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 18px;
   text-transform: uppercase;
   text-align: center;
-  padding: 19px 33px 20px 32px;
+  padding: 15px 0 16px 0;
+  text-decoration: none;
   border: 2px solid #444444;
   background-color: #ffffff;
 }
@@ -104,16 +90,58 @@
 @media (min-width: 768px) {
   .footer__map {
     width: 100%;
+    padding-bottom: 160px;
+  }
+
+  .footer__map-img {
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  .footer__map-img iframe {
+    width: 768px;
+    height: 457px;
+  }
+
+  .footer__logo {
+    &:hover {
+      fill: #46c1ae;
+    }
+
+    &:active {
+      fill: #bee3dd;
+    }
   }
 
   .footer__btn {
-    bottom: 140px;
+    width: 230px;
+    font-size: 17px;
+    padding-top: 17px;
+
+    &:hover {
+      background-color: #444444;
+      color: #ffffff;
+    }
+
+    &:active {
+      color: #b2b2b2;
+    }
   }
 
   .footer__social-block {
     width: 668px;
     display: flex;
     margin: 0 auto;
+  }
+
+  .footer__social-wrap {
+    width: 138px;
+    margin-right: 86px;
+  }
+
+  .footer__copyright-wrap {
+    padding-top: 53px;
+    padding-bottom: 53px;
   }
 
   .footer__hidden {
@@ -127,6 +155,7 @@
     display: flex;
     width: 1050px;
     margin: 0 auto;
+    margin-bottom: 100px;
   }
 
   .footer__wrap-contacts {
@@ -142,9 +171,28 @@
     left: auto;
     transform: none;
     margin: 0 auto;
+    margin-left: 33%;
+    margin-top: 40px;
   }
 
   .footer__map {
+    width: 525px;
+    padding-bottom: 0;
+    margin-top: -95px;
+  }
+
+  .footer__map iframe {
     width: 100%;
+  }
+
+  .footer__copyright-wrap {
+    margin-right: 3px;
+    padding-top: 54px;
+    padding-bottom: 53px;
+  }
+
+  .footer__social-wrap {
+    margin-right: auto;
+    padding-left: 75px;
   }
 }

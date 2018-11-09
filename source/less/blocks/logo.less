@@ -9,13 +9,15 @@ img {
 }
 
 .logo__wrapper {
+  position: relative;
   width: 100%;
   margin: 0 auto;
   height: 35px;
   text-align: center;
-  padding-bottom: 26px;
-  padding-top: 26px;
+  padding-bottom: 21px;
+  padding-top: 23px;
   border-bottom: 1px solid #ececec;
+  text-align: center;
 }
 
 .logo__close {
@@ -34,6 +36,14 @@ img {
   .header__logo img {
     height: auto;
     width: 113px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .logo__wrapper {
@@ -41,8 +51,7 @@ img {
     border-bottom: none;
     margin: 0;
     width: 320px;
-    padding-top: 19px;
-    border-right: 1px solid #ececec;
+    padding-top: 22px;
     text-align: left;
     padding-bottom: 23px;
   }
@@ -55,10 +64,9 @@ img {
 
   .logo__wrapper {
     height: 72px;
-    width: 279px;
+    width: 251px;
     margin-bottom: 0;
     padding-top: 8px;
     padding-bottom: 8px;
-    border-right: 1px solid #ececec;
   }
 }

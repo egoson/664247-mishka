@@ -3,7 +3,7 @@ document.querySelector('body').classList.remove('no-js'); //ну или како
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
 var modal = document.querySelector('.modal');
-var bestsellerBtn = document.querySelector('.bestseller__btn');
+var modalBtn = document.querySelector('.modal-js');
 var modalBackground = document.querySelector('.modal-background');
 
 //navMain.classList.remove('main-nav--nojs'); - это не нужно
@@ -11,8 +11,8 @@ var modalBackground = document.querySelector('.modal-background');
 
 // кнопка не на всех страницах есть, надо проверять наличие
 
-if (bestsellerBtn) {
-    bestsellerBtn.addEventListener('click', function() {
+if (modalBtn) {
+    modalBtn.addEventListener('click', function() {
         if (modal.classList.remove('modal-close'));
         if (modalBackground.classList.remove('modal-close'));
     });

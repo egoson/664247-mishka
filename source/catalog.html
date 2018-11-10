@@ -166,7 +166,7 @@
             </h2>
             <p class="video-block__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
           </div>
-          <a class="video-block__btn btn" href="#">Сделать заказ</a>
+          <a class="video-block__btn btn modal-js" href="#">Сделать заказ</a>
         </div>
       </section>
     </main>
@@ -232,6 +232,23 @@
         </div>
       </div>
     </footer>
+    <div class="modal-background modal-close">
+    </div>
+    <section class="modal modal-close">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <p class="modal__text">Выберете размер:</p>
+      </div>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
+        <input class="modal__form-radio" type="radio" name="size" id="size-s" value="s" checked="">
+        <label class="modal__form-radio-label" for="size-s">s</label>
+        <input class="modal__form-radio" type="radio" name="size" id="size-m" value="m">
+        <label class="modal__form-radio-label" for="size-m">m</label>
+        <input class="modal__form-radio" type="radio" name="size" id="size-l" value="l">
+        <label class="modal__form-radio-label modal__form-radio-label--margin" for="size-l">l</label>
+        <button class="modal__btn btn">Добавить</button>
+      </form>
+    </section>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

@@ -22,6 +22,7 @@
   box-shadow: 0 6px 0 0 #221f1f, 0 12px 0 0 #221f1f;
 }
 
+
 .main-nav__toggle--opened .main-nav__toggle {
   &::before,
   &::after {
@@ -51,6 +52,13 @@
 
   .no-js .header__menu {
     display: block;
+  }
+  .no-js .header__menu--hidden {
+    display: none;
+  }
+
+  .header__menu--hidden {
+    display: none;
   }
 
   .no-js .main-nav__toggle {

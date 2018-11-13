@@ -37,6 +37,11 @@
   background-color: #56c3b2;
 }
 
+.catalog-list__icon {
+  fill: #149080;
+  opacity: 0.5;
+}
+
 .catalog-list__text {
   color: #ffffff;
   font-family: "Open Sans", "Verdana", "Geneva", sans-serif;
@@ -73,19 +78,16 @@
       margin-top: -5px;
     }
 
-    &:hover .catalog-list__icon--interior {
+    &:hover .catalog-list__icon {
       top: 0;
+      opacity: 0.7;
     }
 
     &:active .catalog-list__text {
       opacity: 0.3;
     }
 
-    &:active .catalog-list__icon--interior {
-      opacity: 0.3;
-    }
-
-    &:active .catalog-list__icon--toy {
+    &:active .catalog-list__icon {
       opacity: 0.3;
     }
   }

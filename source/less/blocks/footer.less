@@ -53,6 +53,21 @@
   text-align: center;
 }
 
+.footer__map-img {
+  width: 320px;
+  margin: 0 auto;
+  background-image: url("../img/map-mobile@1x.jpg");
+  background-size: 320px auto;
+  height: 457px;
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .footer__map-img {
+    background-image: url("../img/map-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
+}
+
 .footer__wrap {
   width: 100%;
 }
@@ -94,8 +109,18 @@
   }
 
   .footer__map-img {
-    margin: 0;
+    width: 768px;
+    background-image: url("../img/map-tablet@1x.jpg");
+    background-size: 768px auto;
+    height: 457px;
     margin-top: 20px;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .footer__map-img {
+      background-image: url("../img/map-tablet@2x.jpg");
+      background-size: 768px auto;
+    }
   }
 
   .footer__map-img iframe {
@@ -164,6 +189,19 @@
 
   .footer__social-block {
     width: 1050px;
+  }
+
+  .footer__map-img {
+    width: 525px;
+    background-image: url("../img/map-desktop@1x.jpg");
+    background-size: 525px auto;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .footer__map-img {
+      background-image: url("../img/map-desktop@2x.jpg");
+      background-size: 525px auto;
+    }
   }
 
   .footer__btn {

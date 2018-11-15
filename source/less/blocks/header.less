@@ -14,14 +14,14 @@
   margin: 0 auto;
 }
 
-.header__menu--hidden {
-  display: none;
-}
-
 @media (min-width: 768px) {
   .header {
     width: 768px;
     margin: 0 auto;
+  }
+
+  .header__menu--sales {
+    display: none;
   }
 
   .header__menu {
@@ -43,7 +43,6 @@
   .header__menu--search-form {
     position: relative;
     margin: 0;
-    margin-left: auto;
     max-width: 346px;
     display: flex;
     align-items: center;
@@ -94,5 +93,6 @@
 
   .header__menu--sales {
     order: 2;
+    display: flex;
   }
 }

@@ -9,11 +9,14 @@
   max-width: 100%;
 }
 
-.video__img-play {
+.video__img-btn {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -21,7 +24,9 @@
     position: relative;
     top: 0;
     height: auto;
+  }
 
+  .video__img-btn {
     &:hover .video__img-play {
       width: 120px;
     }
@@ -32,7 +37,7 @@
     }
   }
 
-  .video__wrapper {
+  .video-block__wrapper {
     &:hover {
       box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
     }
@@ -48,13 +53,13 @@
   }
 }
 
-@media (min-width: 1050px) {
+@media (min-width: 1150px) {
   .video {
     width: 682px;
     height: 455px;
   }
 
-  .video__wrapper {
+  .video-wrapper {
     width: 367px;
     padding-left: 80px;
     padding-top: 41px;
